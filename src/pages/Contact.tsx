@@ -140,7 +140,7 @@ const App: React.FC = () => {
           <rect width="100%" height="100%" strokeWidth="0" fill="url(#83fd4e5a-9d52-4224-87a9-60460324c537)" />
         </svg>
 
-        <div className="container mx-auto px-6 py-12 sm:py-24 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 pt-20 pb-12 sm:py-24 lg:px-8">
           <header className="text-center mb-12 md:mb-20">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Contact Us</h1>
             <p className="mt-4 text-lg leading-8 text-neutral-400 max-w-2xl mx-auto">

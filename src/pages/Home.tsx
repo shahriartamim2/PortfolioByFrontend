@@ -146,15 +146,24 @@ const Home = () => {
       </nav> */}
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center px-4 sm:px-6 lg:px-16 pt-24 sm:pt-20 relative">
-        {/* Modern gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-black/95 to-purple-950/20 pointer-events-none" />
+      <section id="home" className="min-h-screen flex items-center px-0 sm:px-6 lg:px-16 pt-24 sm:pt-20 relative">
+        {/* Modern boxes background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-black/95 to-purple-950/20" />
 
-        {/* Animated grid background */}
-        <div className="absolute inset-0 opacity-10">
+          {/* Animated boxes */}
+          <div className="absolute inset-0">
+            <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob" />
+            <div className="absolute -bottom-8 right-0 w-72 h-72 bg-cyan-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000" />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-pink-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-4000" />
+          </div>
+
+          {/* Grid overlay */}
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
-            backgroundSize: '30px 30px'
+            backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), 
+                            linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)`,
+            backgroundSize: '40px 40px'
           }} />
         </div>
 
@@ -229,7 +238,7 @@ const Home = () => {
       </section>
 
       {/* About Me */}
-      <section id="about" className="py-24 sm:py-32 px-4 sm:px-6 relative">
+      <section id="about" className="py-24 sm:py-32 px-0 sm:px-6 relative">
         <div className="max-w-4xl mx-auto fade-in-section">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-10 sm:mb-12 text-center">
             ABOUT ME
@@ -249,7 +258,7 @@ const Home = () => {
       </section>
 
       {/* Experience */}
-      <section id="experience" className="py-24 sm:py-32 px-4 sm:px-6 relative">
+      <section id="experience" className="py-24 sm:py-32 px-0 sm:px-6 relative">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 text-center fade-in-section">
             EXPERIENCE
@@ -279,7 +288,7 @@ const Home = () => {
       </section>
 
       {/* Education */}
-      <section id="education" className="py-24 sm:py-32 px-4 sm:px-6 relative">
+      <section id="education" className="py-24 sm:py-32 px-0 sm:px-6 relative">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 text-center fade-in-section">
             EDUCATION
@@ -309,7 +318,7 @@ const Home = () => {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="py-24 sm:py-32 px-4 sm:px-6 relative">
+      <section id="skills" className="py-24 sm:py-32 px-0 sm:px-6 relative">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 text-center fade-in-section">
             SKILLS
@@ -379,7 +388,7 @@ const Home = () => {
       </section> */}
 
       {/* Certifications */}
-      <section id="certifications" className="py-24 sm:py-32 px-4 sm:px-6 relative">
+      <section id="certifications" className="py-24 sm:py-32 px-0 sm:px-6 relative">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 text-center fade-in-section">
             CERTIFICATIONS
@@ -401,7 +410,7 @@ const Home = () => {
       </section>
 
       {/* Achievements */}
-      <section id="achievements" className="py-24 sm:py-32 px-4 sm:px-6 relative">
+      <section id="achievements" className="py-24 sm:py-32 px-0 sm:px-6 relative">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 text-center fade-in-section">
             ACHIEVEMENTS
@@ -439,6 +448,33 @@ const Home = () => {
       </footer>
 
       <style>{`
+        @keyframes blob {
+          0% {
+            transform: translate(0px, 0px) scale(1);
+          }
+          33% {
+            transform: translate(30px, -50px) scale(1.2);
+          }
+          66% {
+            transform: translate(-20px, 20px) scale(0.8);
+          }
+          100% {
+            transform: translate(0px, 0px) scale(1);
+          }
+        }
+        
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+
         .glass-card {
           background: rgba(255, 255, 255, 0.03);
           backdrop-filter: blur(10px);

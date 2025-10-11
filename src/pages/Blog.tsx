@@ -118,7 +118,7 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog, onBack }) => {
       <div className="hidden md:block fixed left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
       <div className="hidden md:block fixed right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 pt-20 pb-8 sm:py-20 md:py-24">
         <button
           onClick={onBack}
           className="text-white/60 hover:text-white transition-colors mb-6 sm:mb-8 flex items-center gap-2 group active:scale-95 transform"
@@ -186,7 +186,7 @@ const Blog: React.FC = () => {
       <div className="hidden md:block fixed left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
       <div className="hidden md:block fixed right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 py-16 sm:py-20 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 pt-20 pb-16 sm:py-20 md:py-24">
         <header className="mb-8 sm:mb-12 md:mb-16 text-center sm:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2 sm:mb-4">Blog</h1>
           <p className="text-white/60 text-base sm:text-lg md:text-xl">Thoughts, ideas, and insights</p>
