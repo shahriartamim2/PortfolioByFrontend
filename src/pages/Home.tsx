@@ -1,5 +1,6 @@
 import { Award, Briefcase, Code, FileText, Github, GraduationCap, Linkedin, Mail, MapPin, TrendingUp, Trophy } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import profileImage from '/src/images/profile.jpg';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -165,7 +166,7 @@ const Home = () => {
                 <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
                 <div className="relative aspect-square rounded-full overflow-hidden border border-white/10 backdrop-blur-sm">
                   <img
-                    src="/src/images/profile.jpg"
+                    src={profileImage}
                     alt="Abdullah Noman"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
