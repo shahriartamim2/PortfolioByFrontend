@@ -60,14 +60,14 @@ export default function AppLayout() {
 export function AppWrapper({ children }: { children: React.ReactNode }) {
     return (
         <div className="min-h-screen bg-black">
-            {/* Left Border */}
-            <div className="fixed left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
+            {/* Left Border - Hidden on mobile */}
+            <div className="hidden md:block fixed left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
 
-            {/* Right Border */}
-            <div className="fixed right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
+            {/* Right Border - Hidden on mobile */}
+            <div className="hidden md:block fixed right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
 
-            {/* Main Content Area */}
-            <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
+            {/* Main Content Area - Full width on mobile, wrapped on larger screens */}
+            <div className="max-w-7xl mx-auto md:px-16 lg:px-24">
                 {children}
             </div>
         </div>
