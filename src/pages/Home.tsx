@@ -1,6 +1,6 @@
 import { Award, Briefcase, Code, FileText, Github, GraduationCap, Linkedin, Mail, MapPin, TrendingUp, Trophy } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import profileImage from '/src/images/profile.jpg';
+import profileImage from '../images/profile.jpg';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
