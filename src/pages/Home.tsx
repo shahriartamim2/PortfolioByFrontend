@@ -145,48 +145,83 @@ const Home = () => {
       </nav> */}
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black pointer-events-none" />
-        <div className="max-w-6xl w-full relative z-10">
-          <div
-            className="transform transition-all duration-1000 text-center"
-            style={{
-              opacity: Math.max(0.3, 1 - scrollY / 500),
-              transform: `translateY(${scrollY * 0.3}px)`
-            }}
-          >
-            <div className="inline-block mb-8 glow-effect">
-              <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-white to-gray-400 flex items-center justify-center text-black text-5xl font-bold shadow-2xl border-4 border-white/20 hover:scale-110 transition-transform duration-500">
-                <img src="/src/images/profile.jpg" alt="profile" className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-white to-gray-400 flex items-center justify-center text-black text-5xl font-bold shadow-2xl border-4 border-white/20 hover:scale-110 transition-transform duration-500" />
+      <section id="home" className="min-h-screen flex items-center px-6 lg:px-16 pt-20 relative">
+        {/* Modern gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-black/95 to-purple-950/20 pointer-events-none" />
+
+        {/* Animated grid background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }} />
+        </div>
+
+        <div className="max-w-7xl w-full mx-auto relative z-10">
+          <div className="flex flex-col items-center space-y-8">
+            {/* Profile image - Now at the top */}
+            <div className="animate-fadeIn w-48 sm:w-56 md:w-64">
+              <div className="relative group">
+                <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                <div className="relative aspect-square rounded-full overflow-hidden border border-white/10 backdrop-blur-sm">
+                  <img
+                    src="/src/images/profile.jpg"
+                    alt="Abdullah Noman"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
               </div>
             </div>
-            <h1 className="text-7xl md:text-8xl font-bold text-white leading-tight mb-6 tracking-tight">
-              ABDULLAH NOMAN
-            </h1>
-            <div className="h-1 w-32 bg-white mx-auto mb-6" />
-            <p className="text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-light">
-              Innovating the Future of Textile Manufacturing Through Quality, Sustainability & Technology
-            </p>
-            <div className="flex gap-6 justify-center items-center flex-wrap text-gray-400 mb-8">
-              <div className="flex items-center gap-2 hover:text-white transition-colors">
-                <MapPin className="w-5 h-5" />
-                <span>Dhaka, Bangladesh</span>
+
+            {/* Content */}
+            <div className="space-y-8 text-center max-w-3xl">
+              <div className="space-y-4">
+                <h2 className="text-gray-400 text-xl font-light tracking-wider animate-fadeIn">
+                  Hi, I'm
+                </h2>
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-none tracking-tight animate-slideUp">
+                  ABDULLAH <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">NOMAN</span>
+                </h1>
+                <div className="h-1 w-24 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-scaleIn" />
+                <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 font-light leading-relaxed animate-fadeIn opacity-90 px-4">
+                  Innovating the Future of Textile Manufacturing Through Quality, Sustainability & Technology
+                </p>
               </div>
-              <div className="flex items-center gap-2 hover:text-white transition-colors">
-                <Mail className="w-5 h-5" />
-                <span>abdullahnoman001@gmail.com</span>
+
+              {/* Contact info with modern styling */}
+              <div className="flex flex-col sm:flex-row justify-center gap-6 text-gray-400 animate-fadeIn delay-200">
+                <div className="flex items-center gap-3 group">
+                  <div className="p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all duration-300">
+                    <MapPin className="w-5 h-5 group-hover:text-purple-400 transition-colors" />
+                  </div>
+                  <span className="font-light group-hover:text-white transition-colors">Dhaka, Bangladesh</span>
+                </div>
+                <div className="flex items-center gap-3 group">
+                  <div className="p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all duration-300">
+                    <Mail className="w-5 h-5 group-hover:text-purple-400 transition-colors" />
+                  </div>
+                  <span className="font-light group-hover:text-white transition-colors">abdullahnoman001@gmail.com</span>
+                </div>
               </div>
-            </div>
-            <div className="flex gap-4 justify-center pt-4">
-              <button className="p-4 rounded-full bg-white/10 text-white hover:bg-white hover:text-black transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-white/20">
-                <Linkedin className="w-6 h-6" />
-              </button>
-              <button className="p-4 rounded-full bg-white/10 text-white hover:bg-white hover:text-black transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-white/20">
-                <Github className="w-6 h-6" />
-              </button>
-              <button className="p-4 rounded-full bg-white/10 text-white hover:bg-white hover:text-black transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-white/20">
-                <FileText className="w-6 h-6" />
-              </button>
+
+              {/* Social links with modern hover effects */}
+              <div className="flex justify-center gap-4 animate-fadeIn delay-300">
+                <a href="https://linkedin.com" className="group">
+                  <div className="p-3 sm:p-4 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
+                    <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-white/70 group-hover:text-white transition-colors" />
+                  </div>
+                </a>
+                <a href="https://github.com" className="group">
+                  <div className="p-3 sm:p-4 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
+                    <Github className="w-5 h-5 sm:w-6 sm:h-6 text-white/70 group-hover:text-white transition-colors" />
+                  </div>
+                </a>
+                <a href="/resume" className="group">
+                  <div className="p-3 sm:p-4 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
+                    <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-white/70 group-hover:text-white transition-colors" />
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -475,6 +510,56 @@ const Home = () => {
 
         ::-webkit-scrollbar-thumb:hover {
           background: #555;
+        }
+
+        /* Modern animations */
+        .animate-fadeIn {
+          animation: fadeIn 1s ease-out forwards;
+        }
+
+        .animate-slideUp {
+          animation: slideUp 1s ease-out forwards;
+        }
+
+        .animate-scaleIn {
+          animation: scaleIn 1s ease-out forwards;
+        }
+
+        .delay-200 {
+          animation-delay: 200ms;
+        }
+
+        .delay-300 {
+          animation-delay: 300ms;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes scaleIn {
+          from {
+            transform: scaleX(0);
+          }
+          to {
+            transform: scaleX(1);
+          }
         }
       `}</style>
     </div>
