@@ -146,7 +146,7 @@ const Home = () => {
       </nav> */}
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center px-6 lg:px-16 pt-20 relative">
+      <section id="home" className="min-h-screen flex items-center px-4 sm:px-6 lg:px-16 pt-24 sm:pt-20 relative">
         {/* Modern gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-black/95 to-purple-950/20 pointer-events-none" />
 
@@ -154,14 +154,14 @@ const Home = () => {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
+            backgroundSize: '30px 30px'
           }} />
         </div>
 
         <div className="max-w-7xl w-full mx-auto relative z-10">
           <div className="flex flex-col items-center space-y-8">
             {/* Profile image - Now at the top */}
-            <div className="animate-fadeIn w-48 sm:w-56 md:w-64">
+            <div className="animate-fadeIn w-40 sm:w-48 md:w-56">
               <div className="relative group">
                 <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
                 <div className="relative aspect-square rounded-full overflow-hidden border border-white/10 backdrop-blur-sm">
@@ -175,51 +175,51 @@ const Home = () => {
             </div>
 
             {/* Content */}
-            <div className="space-y-8 text-center max-w-3xl">
+            <div className="space-y-6 sm:space-y-8 text-center max-w-3xl">
               <div className="space-y-4">
-                <h2 className="text-gray-400 text-xl font-light tracking-wider animate-fadeIn">
+                <h2 className="text-gray-400 text-lg sm:text-xl font-light tracking-wider animate-fadeIn">
                   Hi, I'm
                 </h2>
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-none tracking-tight animate-slideUp">
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-none tracking-tight animate-slideUp">
                   ABDULLAH <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">NOMAN</span>
                 </h1>
-                <div className="h-1 w-24 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-scaleIn" />
-                <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 font-light leading-relaxed animate-fadeIn opacity-90 px-4">
+                <div className="h-1 w-20 sm:w-24 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-scaleIn" />
+                <p className="text-base sm:text-lg lg:text-xl text-gray-300 font-light leading-relaxed animate-fadeIn opacity-90 px-4">
                   Innovating the Future of Textile Manufacturing Through Quality, Sustainability & Technology
                 </p>
               </div>
 
               {/* Contact info with modern styling */}
-              <div className="flex flex-col sm:flex-row justify-center gap-6 text-gray-400 animate-fadeIn delay-200">
-                <div className="flex items-center gap-3 group">
+              <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 text-gray-400 animate-fadeIn delay-200">
+                <div className="flex items-center justify-center sm:justify-start gap-3 group">
                   <div className="p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all duration-300">
-                    <MapPin className="w-5 h-5 group-hover:text-purple-400 transition-colors" />
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-purple-400 transition-colors" />
                   </div>
-                  <span className="font-light group-hover:text-white transition-colors">Dhaka, Bangladesh</span>
+                  <span className="text-sm sm:text-base font-light group-hover:text-white transition-colors">Dhaka, Bangladesh</span>
                 </div>
-                <div className="flex items-center gap-3 group">
+                <div className="flex items-center justify-center sm:justify-start gap-3 group">
                   <div className="p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all duration-300">
-                    <Mail className="w-5 h-5 group-hover:text-purple-400 transition-colors" />
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-purple-400 transition-colors" />
                   </div>
-                  <span className="font-light group-hover:text-white transition-colors">abdullahnoman001@gmail.com</span>
+                  <span className="text-sm sm:text-base font-light group-hover:text-white transition-colors">abdullahnoman001@gmail.com</span>
                 </div>
               </div>
 
               {/* Social links with modern hover effects */}
               <div className="flex justify-center gap-4 animate-fadeIn delay-300">
                 <a href="https://linkedin.com" className="group">
-                  <div className="p-3 sm:p-4 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
-                    <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-white/70 group-hover:text-white transition-colors" />
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
+                    <Linkedin className="w-5 h-5" />
                   </div>
                 </a>
                 <a href="https://github.com" className="group">
-                  <div className="p-3 sm:p-4 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
-                    <Github className="w-5 h-5 sm:w-6 sm:h-6 text-white/70 group-hover:text-white transition-colors" />
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
+                    <Github className="w-5 h-5" />
                   </div>
                 </a>
                 <a href="/resume" className="group">
-                  <div className="p-3 sm:p-4 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
-                    <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-white/70 group-hover:text-white transition-colors" />
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
+                    <FileText className="w-5 h-5" />
                   </div>
                 </a>
               </div>
@@ -229,23 +229,17 @@ const Home = () => {
       </section>
 
       {/* About Me */}
-      <section id="about" className="py-32 px-6 relative">
-        <div className="max-w-5xl mx-auto fade-in-section">
-          <h2 className="text-5xl font-bold text-white mb-12 text-center">
+      <section id="about" className="py-24 sm:py-32 px-4 sm:px-6 relative">
+        <div className="max-w-4xl mx-auto fade-in-section">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-10 sm:mb-12 text-center">
             ABOUT ME
           </h2>
-          <div className="glass-card p-12 group">
-            <p className="text-xl text-gray-300 leading-relaxed mb-8">
+          <div className="glass-card p-6 sm:p-8 md:p-12 group">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-6 sm:mb-8">
               I am a passionate and dedicated Textile Engineer with comprehensive expertise in Yarn manufacturing,
               quality control systems, and production process optimization.
             </p>
-            <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              With a strong foundation in textile science and hands-on experience across industry manufacturing
-              environment, I specialize in developing cutting-edge solutions that enhance production efficiency
-              while maintaining the highest quality standards. My approach combines technical expertise with
-              creative problem-solving to address complex challenges.
-            </p>
-            <p className="text-xl text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
               I am deeply committed to sustainable practices and continuous improvement in textile manufacturing.
               My work focuses on integrating modern technology with traditional craftsmanship to create innovative,
               eco-friendly solutions that meet the evolving demands of the global textile industry.
@@ -255,27 +249,27 @@ const Home = () => {
       </section>
 
       {/* Experience */}
-      <section id="experience" className="py-32 px-6 relative">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold text-white mb-16 text-center fade-in-section">
+      <section id="experience" className="py-24 sm:py-32 px-4 sm:px-6 relative">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 text-center fade-in-section">
             EXPERIENCE
           </h2>
           <div className="space-y-8">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="glass-card p-8 group fade-in-section"
+                className="glass-card p-6 sm:p-8 group fade-in-section"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="flex items-start gap-6">
-                  <div className="p-4 bg-white/5 rounded-xl border border-white/10 group-hover:bg-white/10 transition-all duration-300">
-                    <Briefcase className="w-8 h-8 text-white" />
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                  <div className="p-3 sm:p-4 bg-white/5 rounded-xl border border-white/10 group-hover:bg-white/10 transition-all duration-300 self-start">
+                    <Briefcase className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
-                    <p className="text-gray-400 font-medium text-lg">{exp.company}</p>
-                    <p className="text-sm text-gray-500 mt-1 mb-4">{exp.period}</p>
-                    <p className="text-gray-300 mb-4 leading-relaxed">{exp.description}</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-2">{exp.title}</h3>
+                    <p className="text-gray-400 font-medium text-base sm:text-lg">{exp.company}</p>
+                    <p className="text-xs sm:text-sm text-gray-500 mt-1 mb-3 sm:mb-4">{exp.period}</p>
+                    <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{exp.description}</p>
                   </div>
                 </div>
               </div>
@@ -285,27 +279,27 @@ const Home = () => {
       </section>
 
       {/* Education */}
-      <section id="education" className="py-32 px-6 relative">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl font-bold text-white mb-16 text-center fade-in-section">
+      <section id="education" className="py-24 sm:py-32 px-4 sm:px-6 relative">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 text-center fade-in-section">
             EDUCATION
           </h2>
           <div className="space-y-8">
             {education.map((edu, index) => (
               <div
                 key={index}
-                className="glass-card p-10 group fade-in-section"
+                className="glass-card p-6 sm:p-8 md:p-10 group fade-in-section"
               >
-                <div className="flex items-start gap-6">
-                  <div className="p-4 bg-white/5 rounded-xl border border-white/10 group-hover:bg-white/10 transition-all duration-300">
-                    <GraduationCap className="w-8 h-8 text-white" />
+                <div className="flex items-start gap-4 sm:gap-6">
+                  <div className="p-3 sm:p-4 bg-white/5 rounded-xl border border-white/10 group-hover:bg-white/10 transition-all duration-300">
+                    <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">{edu.degree}</h3>
-                    <p className="text-gray-400 font-medium text-lg">{edu.institution}</p>
-                    <p className="text-sm text-gray-500 mt-1 mb-3">{edu.year}</p>
-                    <p className="text-gray-300 mb-2">{edu.subject}</p>
-                    <p className="text-white font-semibold">CGPA: {edu.result}</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-2">{edu.degree}</h3>
+                    <p className="text-gray-400 font-medium text-base sm:text-lg">{edu.institution}</p>
+                    <p className="text-xs sm:text-sm text-gray-500 mt-1 mb-3">{edu.year}</p>
+                    <p className="text-gray-300 text-sm sm:text-base mb-2">{edu.subject}</p>
+                    <p className="text-white font-semibold text-sm sm:text-base">Result: {edu.result}</p>
                   </div>
                 </div>
               </div>
@@ -315,31 +309,31 @@ const Home = () => {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="py-32 px-6 relative">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-5xl font-bold text-white mb-16 text-center fade-in-section">
+      <section id="skills" className="py-24 sm:py-32 px-4 sm:px-6 relative">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 text-center fade-in-section">
             SKILLS
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {Object.entries(skills).map(([category, skillList], catIndex) => (
               <div
                 key={category}
-                className="glass-card p-8 group fade-in-section"
+                className="glass-card p-6 sm:p-8 group fade-in-section"
                 style={{ animationDelay: `${catIndex * 0.2}s` }}
               >
-                <div className="flex items-center gap-3 mb-6">
-                  {catIndex === 0 && <Award className="w-7 h-7 text-white" />}
-                  {catIndex === 1 && <TrendingUp className="w-7 h-7 text-white" />}
-                  {catIndex === 2 && <Code className="w-7 h-7 text-white" />}
-                  <h3 className="text-2xl font-bold text-white capitalize">
+                <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                  {catIndex === 0 && <Award className="w-6 h-6 sm:w-7 sm:h-7 text-white" />}
+                  {catIndex === 1 && <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7 text-white" />}
+                  {catIndex === 2 && <Code className="w-6 h-6 sm:w-7 sm:h-7 text-white" />}
+                  <h3 className="text-xl sm:text-2xl font-bold text-white capitalize">
                     {category}
                   </h3>
                 </div>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 sm:gap-3">
                   {skillList.map((skill, index) => (
                     <span
                       key={index}
-                      className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-gray-300 hover:bg-white hover:text-black transition-all duration-300 cursor-default backdrop-blur-sm"
+                      className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/5 border border-white/10 rounded-lg text-sm sm:text-base text-gray-300 hover:bg-white hover:text-black transition-all duration-300 cursor-default backdrop-blur-sm"
                     >
                       {skill}
                     </span>
@@ -352,27 +346,27 @@ const Home = () => {
       </section>
 
       {/* My Works */}
-      {/* <section id="works" className="py-32 px-6 relative">
+      {/* <section id="works" className="py-24 sm:py-32 px-4 sm:px-6 relative">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold text-white mb-16 text-center fade-in-section">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 text-center fade-in-section">
             MY WORKS
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="glass-card p-8 group fade-in-section"
+                className="glass-card p-6 sm:p-8 group fade-in-section"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-gray-300 transition-colors">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 group-hover:text-gray-300 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 leading-relaxed mb-6">{project.description}</p>
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 bg-white/5 border border-white/10 text-gray-400 rounded-full text-sm backdrop-blur-sm"
+                      className="px-3 py-1 bg-white/5 border border-white/10 text-gray-400 rounded-full text-xs sm:text-sm backdrop-blur-sm"
                     >
                       {tag}
                     </span>
@@ -385,20 +379,20 @@ const Home = () => {
       </section> */}
 
       {/* Certifications */}
-      <section id="certifications" className="py-32 px-6 relative">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl font-bold text-white mb-16 text-center fade-in-section">
+      <section id="certifications" className="py-24 sm:py-32 px-4 sm:px-6 relative">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 text-center fade-in-section">
             CERTIFICATIONS
           </h2>
-          <div className="glass-card p-10 fade-in-section">
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="glass-card p-6 sm:p-8 md:p-10 fade-in-section">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               {certifications.map((cert, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                  className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300 group"
                 >
-                  <Award className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
-                  <span className="text-gray-300 group-hover:text-white transition-colors">{cert}</span>
+                  <Award className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform flex-shrink-0" />
+                  <span className="text-gray-300 group-hover:text-white transition-colors text-sm sm:text-base">{cert}</span>
                 </div>
               ))}
             </div>
@@ -407,20 +401,20 @@ const Home = () => {
       </section>
 
       {/* Achievements */}
-      <section id="achievements" className="py-32 px-6 relative">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl font-bold text-white mb-16 text-center fade-in-section">
+      <section id="achievements" className="py-24 sm:py-32 px-4 sm:px-6 relative">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 text-center fade-in-section">
             ACHIEVEMENTS
           </h2>
-          <div className="glass-card p-10 fade-in-section">
-            <div className="space-y-6">
+          <div className="glass-card p-6 sm:p-8 md:p-10 fade-in-section">
+            <div className="space-y-4 sm:space-y-6">
               {achievements.map((achievement, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                  className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300 group"
                 >
-                  <Trophy className="w-6 h-6 text-white mt-1 group-hover:scale-110 transition-transform flex-shrink-0" />
-                  <span className="text-gray-300 group-hover:text-white transition-colors leading-relaxed">{achievement}</span>
+                  <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-white mt-1 group-hover:scale-110 transition-transform flex-shrink-0" />
+                  <span className="text-gray-300 group-hover:text-white transition-colors leading-relaxed text-sm sm:text-base">{achievement}</span>
                 </div>
               ))}
             </div>
@@ -429,17 +423,17 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 py-16 px-6 relative">
-        <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-3xl font-bold mb-4 text-white">LET'S CONNECT</h3>
-          <p className="text-gray-400 mb-8 text-lg">
+      <footer className="border-t border-white/10 py-16 sm:py-20 px-4 sm:px-6 relative">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-white">LET'S CONNECT</h3>
+          <p className="text-gray-400 mb-6 sm:mb-8 text-base sm:text-lg">
             Open to discussing new projects, opportunities, and collaborations
           </p>
-          <button className="px-10 py-4 bg-white text-black hover:bg-gray-200 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-2xl">
+          <button className="px-8 py-3 sm:px-10 sm:py-4 bg-white text-black hover:bg-gray-200 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-2xl text-sm sm:text-base">
             <a href="/contact">GET IN TOUCH</a>
           </button>
-          <p className="text-gray-600 text-sm mt-12">
-            © 2024 Your Name. All Rights Reserved.
+          <p className="text-gray-600 text-xs sm:text-sm mt-10 sm:mt-12">
+            © 2024 Abdullah Noman. All Rights Reserved.
           </p>
         </div>
       </footer>
@@ -467,7 +461,7 @@ const Home = () => {
 
         @keyframes pulse {
           0%, 100% {
-            filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.3));
+            filter: drop-shadow(0 0 30px rgba(255, 255, 255, .3));
           }
           50% {
             filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.5));
@@ -482,7 +476,7 @@ const Home = () => {
         @keyframes fadeInUp {
           from {
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(30px);
           }
           to {
             opacity: 1;
@@ -497,7 +491,7 @@ const Home = () => {
 
         /* Custom scrollbar */
         ::-webkit-scrollbar {
-          width: 10px;
+          width: 8px;
         }
 
         ::-webkit-scrollbar-track {
@@ -505,12 +499,12 @@ const Home = () => {
         }
 
         ::-webkit-scrollbar-thumb {
-          background: #333;
-          border-radius: 5px;
+          background: #222;
+          border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: #555;
+          background: #444;
         }
 
         /* Modern animations */
@@ -546,7 +540,7 @@ const Home = () => {
         @keyframes slideUp {
           from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(20px);
           }
           to {
             opacity: 1;
@@ -561,6 +555,11 @@ const Home = () => {
           to {
             transform: scaleX(1);
           }
+        }
+        
+        /* Update - Fix result text in education section */
+        #education .font-semibold {
+          font-weight: 500; /* Medium weight instead of semi-bold */
         }
       `}</style>
     </div>

@@ -150,7 +150,7 @@ const App: React.FC = () => {
 
           <main>
             {/* Contact Information Section */}
-            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
               {contactDetails.map((item) => (
                 <a
                   key={item.title}
@@ -159,26 +159,27 @@ const App: React.FC = () => {
                   rel="noopener noreferrer"
                   className="group relative block p-6 bg-neutral-900/50 border border-neutral-800 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:border-sky-500/50 hover:-translate-y-1"
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="bg-neutral-800 p-3 rounded-lg border border-neutral-700">
+                  <div className="flex items-start sm:items-center gap-4 mb-3 sm:mb-4">
+                    <div className="bg-neutral-800 p-3 rounded-lg border border-neutral-700 mt-1 sm:mt-0">
                       {item.icon}
                     </div>
-                    <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-semibold text-white">{item.title}</h3>
+                      <p className="text-neutral-400 text-sm sm:text-base break-all">{item.info}</p>
+                    </div>
                   </div>
-
-                  <p className="text-neutral-300">{item.info}</p>
                   <p className="mt-2 text-sky-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm">{item.actionText} →</p>
                 </a>
               ))}
             </section>
 
             {/* Social Media Section */}
-            <section className="text-center bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xl font-bold tracking-tight text-white">Connect on Social Media</h2>
-              <p className="mt-3 text-lg leading-7 text-neutral-400 max-w-xl mx-auto">
+            <section className="text-center bg-neutral-900/50 border border-neutral-800 rounded-2xl p-6 sm:p-8 md:p-12">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">Connect on Social Media</h2>
+              <p className="mt-3 text-base sm:text-lg leading-7 text-neutral-400 max-w-xl mx-auto">
                 Follow our journey, get the latest updates, and join our community on your favorite platforms.
               </p>
-              <div className="mt-8 flex justify-center items-center gap-4">
+              <div className="mt-6 sm:mt-8 flex justify-center items-center gap-3 sm:gap-4">
                 {socialHandles.map((social) => (
                   <SocialIcon key={social.type} type={social.type} href={social.href} />
                 ))}
@@ -186,8 +187,8 @@ const App: React.FC = () => {
             </section>
           </main>
 
-          <footer className="text-center mt-20 text-neutral-500 text-sm">
-            <p>&copy; {new Date().getFullYear()} Enterprise Inc. All rights reserved.</p>
+          <footer className="text-center mt-16 sm:mt-20 text-neutral-500 text-xs sm:text-sm">
+            <p>&copy; {new Date().getFullYear()} Abdullah Noman. All rights reserved.</p>
           </footer>
 
         </div>
