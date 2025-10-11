@@ -157,7 +157,7 @@ const Home = () => {
           >
             <div className="inline-block mb-8 glow-effect">
               <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-white to-gray-400 flex items-center justify-center text-black text-5xl font-bold shadow-2xl border-4 border-white/20 hover:scale-110 transition-transform duration-500">
-                <img src="/public/profile.jpg" alt="profile" className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-white to-gray-400 flex items-center justify-center text-black text-5xl font-bold shadow-2xl border-4 border-white/20 hover:scale-110 transition-transform duration-500" />
+                <img src="/src/images/profile.jpg" alt="profile" className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-white to-gray-400 flex items-center justify-center text-black text-5xl font-bold shadow-2xl border-4 border-white/20 hover:scale-110 transition-transform duration-500" />
               </div>
             </div>
             <h1 className="text-7xl md:text-8xl font-bold text-white leading-tight mb-6 tracking-tight">
