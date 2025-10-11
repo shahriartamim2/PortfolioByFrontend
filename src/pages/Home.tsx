@@ -26,64 +26,51 @@ const Home = () => {
 
   const skills = {
     technical: [
-      'Textile Design & CAD', 'Quality Control Systems', 'Fabric Analysis',
-      'Production Planning', 'Process Engineering', 'Material Science'
+      'Quality Control Systems', 'Fabric Analysis',
+      'Production Planning', 'Process Engineering', 'Process Optimization',
     ],
     specialized: [
-      'Dyeing & Printing Technology', 'Fabric Testing Standards',
-      'Process Optimization', 'Supply Chain Management', 'Lean Manufacturing',
+      'Dyeing & Finishing Technology', 'Fabric Testing Standards',
+      'Yarn Manufacturing', 'Fabric Manufacturing',
       'ISO Quality Standards'
     ],
     software: [
-      'Adobe Creative Suite', 'CAD/CAM Software', 'ERP Systems',
-      'Microsoft Office Suite', 'Data Analysis Tools', 'AutoCAD'
+      'Excell', 'Word', 'PowerBI', 'MS Access', 'SPSS', 'R Studio', 'Python'
     ]
   };
 
   const experiences = [
     {
-      title: 'Senior Textile Engineer',
-      company: 'Your Company Name',
-      period: '2022 - Present',
-      description: 'Leading quality assurance initiatives and process optimization projects. Implemented automated testing systems that improved defect detection by 35%.',
-      responsibilities: [
-        'Oversee production quality and process optimization',
-        'Lead R&D initiatives for sustainable fabric development',
-        'Manage cross-functional teams and supplier relationships'
-      ]
+      title: 'Intern ',
+      company: 'Mosaraf Composite Textile Mills Ltd',
+      period: 'August 2025 - September 2025',
+      description: 'Gained hands-on experience in various textile manufacturing processes, including spinnig, knittinging, dyeing, and finishing. Assisted in quality control and production planning activities.',
     },
-    {
-      title: 'Textile Engineer',
-      company: 'Previous Company',
-      period: '2020 - 2022',
-      description: 'Managed production processes and implemented quality control systems across multiple production lines.',
-      responsibilities: [
-        'Developed and implemented quality control protocols',
-        'Optimized dyeing and finishing processes',
-        'Conducted fabric performance testing and analysis'
-      ]
-    },
-    {
-      title: 'Junior Textile Engineer',
-      company: 'First Company',
-      period: '2018 - 2020',
-      description: 'Assisted in fabric testing, production planning, and quality assurance activities.',
-      responsibilities: [
-        'Performed fabric testing and quality inspections',
-        'Assisted in production planning and scheduling',
-        'Maintained documentation and technical reports'
-      ]
-    }
   ];
 
   const education = [
     {
       degree: 'B.Sc. in Textile Engineering',
-      institution: 'Your University',
-      year: '2018',
-      details: 'Specialized in Fabric Manufacturing Technology',
-      cgpa: '3.85/4.00'
-    }
+      institution: 'Bangladesh University of Textiles (BUTEX)',
+      year: '2026 (Expected)',
+      subject: 'Specialized in Yarn Manufacturing',
+      result: 'CGPA - 3.21'
+    },
+    {
+      degree: 'Higher Secondary Certificate (HSC)',
+      institution: 'Govt. KC College, Jhenidah',
+      year: '2019',
+      subject: 'Science',
+      result: 'GPA - 5.00'
+    },
+    {
+      degree: 'Secondary School Certificate (SSC)',
+      institution: 'Joradah Secondary School, Harinakundu',
+      year: '2017',
+      subject: 'Science',
+      result: 'GPA - 5.00'
+    },
+
   ];
 
   const projects = [
@@ -110,18 +97,14 @@ const Home = () => {
   ];
 
   const certifications = [
-    'Six Sigma Green Belt Certification',
-    'ISO 9001 Quality Management',
-    'Textile Testing & Quality Control',
-    'Lean Manufacturing Principles',
-    'CAD Design Professional'
+    'ICPC Dhaka Regional Finalist 2024',
+    'Python for Data Science & Ai',
+    'Python Course Offered by University of Michigan',
+    'Management',
   ];
 
   const achievements = [
-    'Reduced production costs by 20% through process optimization',
-    'Led team that won "Innovation Award" for sustainable fabric development',
-    'Published research paper on advanced dyeing techniques',
-    'Achieved 99.5% quality acceptance rate across product lines'
+    'Published research paper on firber & Yarn recycling technologies',
   ];
 
   return (
@@ -174,11 +157,11 @@ const Home = () => {
           >
             <div className="inline-block mb-8 glow-effect">
               <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-white to-gray-400 flex items-center justify-center text-black text-5xl font-bold shadow-2xl border-4 border-white/20 hover:scale-110 transition-transform duration-500">
-                YN
+                <img src="/public/profile.jpg" alt="profile" className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-white to-gray-400 flex items-center justify-center text-black text-5xl font-bold shadow-2xl border-4 border-white/20 hover:scale-110 transition-transform duration-500" />
               </div>
             </div>
             <h1 className="text-7xl md:text-8xl font-bold text-white leading-tight mb-6 tracking-tight">
-              TEXTILE ENGINEER
+              ABDULLAH NOMAN
             </h1>
             <div className="h-1 w-32 bg-white mx-auto mb-6" />
             <p className="text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-light">
@@ -187,11 +170,11 @@ const Home = () => {
             <div className="flex gap-6 justify-center items-center flex-wrap text-gray-400 mb-8">
               <div className="flex items-center gap-2 hover:text-white transition-colors">
                 <MapPin className="w-5 h-5" />
-                <span>Your City, Country</span>
+                <span>Dhaka, Bangladesh</span>
               </div>
               <div className="flex items-center gap-2 hover:text-white transition-colors">
                 <Mail className="w-5 h-5" />
-                <span>your.email@example.com</span>
+                <span>abdullahnoman001@gmail.com</span>
               </div>
             </div>
             <div className="flex gap-4 justify-center pt-4">
@@ -217,13 +200,12 @@ const Home = () => {
           </h2>
           <div className="glass-card p-12 group">
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              I am a passionate and dedicated Textile Engineer with comprehensive expertise in fabric manufacturing,
-              quality control systems, and production process optimization. My professional journey has been driven
-              by a commitment to excellence and innovation in the textile industry.
+              I am a passionate and dedicated Textile Engineer with comprehensive expertise in Yarn manufacturing,
+              quality control systems, and production process optimization.
             </p>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              With a strong foundation in textile science and hands-on experience across various manufacturing
-              environments, I specialize in developing cutting-edge solutions that enhance production efficiency
+              With a strong foundation in textile science and hands-on experience across industry manufacturing
+              environment, I specialize in developing cutting-edge solutions that enhance production efficiency
               while maintaining the highest quality standards. My approach combines technical expertise with
               creative problem-solving to address complex challenges.
             </p>
@@ -258,14 +240,6 @@ const Home = () => {
                     <p className="text-gray-400 font-medium text-lg">{exp.company}</p>
                     <p className="text-sm text-gray-500 mt-1 mb-4">{exp.period}</p>
                     <p className="text-gray-300 mb-4 leading-relaxed">{exp.description}</p>
-                    <ul className="space-y-2">
-                      {exp.responsibilities.map((resp, idx) => (
-                        <li key={idx} className="text-gray-400 flex items-start gap-3">
-                          <span className="text-white mt-1.5">•</span>
-                          <span>{resp}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                 </div>
               </div>
@@ -294,8 +268,8 @@ const Home = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">{edu.degree}</h3>
                     <p className="text-gray-400 font-medium text-lg">{edu.institution}</p>
                     <p className="text-sm text-gray-500 mt-1 mb-3">{edu.year}</p>
-                    <p className="text-gray-300 mb-2">{edu.details}</p>
-                    <p className="text-white font-semibold">CGPA: {edu.cgpa}</p>
+                    <p className="text-gray-300 mb-2">{edu.subject}</p>
+                    <p className="text-white font-semibold">CGPA: {edu.result}</p>
                   </div>
                 </div>
               </div>
