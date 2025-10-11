@@ -59,11 +59,11 @@ export default function AppLayout() {
 // Alternative: If you want this as a reusable wrapper component
 export function AppWrapper({ children }: { children: React.ReactNode }) {
     return (
-        <div className="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
+        <div className="min-h-screen bg-black text-neutral-100 antialiased">
             <div className="relative isolate overflow-hidden">
-                {/* Decorative background from Contact page */}
+                {/* Decorative pattern background */}
                 <svg
-                    className="absolute inset-0 -z-10 h-full w-full stroke-neutral-800/40 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+                    className="absolute inset-0 -z-10 h-full w-full stroke-white/10"
                     aria-hidden="true"
                 >
                     <defs>
@@ -78,17 +78,11 @@ export function AppWrapper({ children }: { children: React.ReactNode }) {
                             <path d="M100 200V.5M.5 .5H200" fill="none" />
                         </pattern>
                     </defs>
-                    <svg x="50%" y="-1" className="overflow-visible fill-neutral-900/40">
-                        <path
-                            d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-                            strokeWidth="0"
-                        />
-                    </svg>
                     <rect width="100%" height="100%" strokeWidth="0" fill="url(#background-pattern)" />
                 </svg>
 
                 {/* Main Content Area - Full width on mobile, wrapped on larger screens */}
-                <main className="max-w-7xl mx-auto md:px-16 lg:px-24">
+                <main className="max-w-7xl mx-auto px-0 md:px-16 lg:px-24">
                     {children}
                 </main>
             </div>
