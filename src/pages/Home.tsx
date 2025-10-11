@@ -73,28 +73,28 @@ const Home = () => {
 
   ];
 
-  const projects = [
-    {
-      title: 'Sustainable Fabric Development',
-      description: 'Led development of eco-friendly fabric line using organic materials, reducing water usage by 40% and chemical consumption by 30%.',
-      tags: ['Innovation', 'Sustainability', 'R&D', 'Product Development']
-    },
-    {
-      title: 'Automated Quality Control System',
-      description: 'Designed and implemented AI-powered quality inspection system, improving defect detection accuracy and reducing inspection time.',
-      tags: ['Quality', 'Automation', 'Technology', 'Efficiency']
-    },
-    {
-      title: 'Dyeing Process Optimization',
-      description: 'Streamlined dyeing procedures through process re-engineering, reducing cycle time by 25% while maintaining color consistency.',
-      tags: ['Process Engineering', 'Efficiency', 'Cost Reduction']
-    },
-    {
-      title: 'Performance Textile Innovation',
-      description: 'Created advanced performance textile for athletic wear featuring enhanced moisture-wicking and breathability properties.',
-      tags: ['Innovation', 'Product Development', 'Technical Textiles', 'R&D']
-    }
-  ];
+  // const projects = [
+  //   {
+  //     title: 'Sustainable Fabric Development',
+  //     description: 'Led development of eco-friendly fabric line using organic materials, reducing water usage by 40% and chemical consumption by 30%.',
+  //     tags: ['Innovation', 'Sustainability', 'R&D', 'Product Development']
+  //   },
+  //   {
+  //     title: 'Automated Quality Control System',
+  //     description: 'Designed and implemented AI-powered quality inspection system, improving defect detection accuracy and reducing inspection time.',
+  //     tags: ['Quality', 'Automation', 'Technology', 'Efficiency']
+  //   },
+  //   {
+  //     title: 'Dyeing Process Optimization',
+  //     description: 'Streamlined dyeing procedures through process re-engineering, reducing cycle time by 25% while maintaining color consistency.',
+  //     tags: ['Process Engineering', 'Efficiency', 'Cost Reduction']
+  //   },
+  //   {
+  //     title: 'Performance Textile Innovation',
+  //     description: 'Created advanced performance textile for athletic wear featuring enhanced moisture-wicking and breathability properties.',
+  //     tags: ['Innovation', 'Product Development', 'Technical Textiles', 'R&D']
+  //   }
+  // ];
 
   const certifications = [
     'ICPC Dhaka Regional Finalist 2024',
@@ -316,7 +316,7 @@ const Home = () => {
       </section>
 
       {/* My Works */}
-      <section id="works" className="py-32 px-6 relative">
+      {/* <section id="works" className="py-32 px-6 relative">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-white mb-16 text-center fade-in-section">
             MY WORKS
@@ -346,7 +346,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Certifications */}
       <section id="certifications" className="py-32 px-6 relative">
