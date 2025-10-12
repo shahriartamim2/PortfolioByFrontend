@@ -13,7 +13,7 @@ const Home = () => {
 
   const handleDownloadCV = async () => {
     try {
-      const response = await fetch('/assets/cv.pdf');
+      const response = await fetch('/cv.pdf');
       const blob = await response.blob();
       const url = window.URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
       const link = document.createElement('a');
