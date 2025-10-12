@@ -58,7 +58,7 @@ export default function Navbar() {
 
                             {/* Mobile Nav Toggler */}
                             <div className="sm:hidden flex items-center justify-between w-full">
-                                <NavLink to="/" className="text-lg font-bold text-white">MyPortfolio</NavLink>
+                                <NavLink to="/" className="text-lg font-bold text-white">Abdullah Noman</NavLink>
                                 <button onClick={() => setIsOpen(!isOpen)} className="text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white/50">
                                     {isOpen ? <X size={24} /> : <Menu size={24} />}
                                 </button>

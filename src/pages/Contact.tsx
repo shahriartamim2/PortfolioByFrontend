@@ -77,9 +77,9 @@ const App: React.FC = () => {
     {
       icon: <Mail className="w-8 h-8 text-neutral-400" />,
       title: 'Email Me',
-      info: 'abdullahnoman001@gmail.com',
+      info: 'abdnoman001@gmail.com',
       actionText: 'Send an email',
-      href: 'mailto:abdullahnoman001@gmail.com'
+      href: 'mailto:abdnoman001@gmail.com'
     },
     // {
     //   icon: <Phone className="w-8 h-8 text-neutral-400" />,
