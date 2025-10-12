@@ -11,8 +11,13 @@ const Home = () => {
     setIsVisible(true);
   }, []);
 
-  const handleDownload = () => {
-    alert('In your project, this will download cv.pdf from your assets folder!');
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/public/cv.pdf';
+    link.download = 'Abdullah_Noman_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
   useEffect(() => {
     const handleScroll = () => {
@@ -226,7 +231,7 @@ const Home = () => {
               <div className={`flex flex-wrap items-center gap-4 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Download CV Button */}
                 <button
-                  onClick={handleDownload}
+                  onClick={handleDownloadCV}
                   className="inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/50 group"
                 >
                   <Download className="w-5 h-5 group-hover:animate-bounce" />
