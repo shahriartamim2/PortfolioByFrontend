@@ -167,7 +167,7 @@ const Home = () => {
       </nav> */}
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center px-0 sm:px-6 lg:px-16 pt-24 sm:pt-20 relative">
+      <section id="home" className="min-h-screen flex items-center px-0 sm:px-6 lg:px-16 sm:pt-20 relative">
         {/* Modern boxes background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Background gradient */}
