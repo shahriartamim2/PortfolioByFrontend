@@ -11,21 +11,23 @@ const Home = () => {
     setIsVisible(true);
   }, []);
 
-  const handleDownloadCV = () => {
-    // Use fetch to get the file as a blob
-    fetch('/assets/cv.pdf')
-      .then(response => response.blob())
-      .then(blob => {
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'Abdullah_Noman_CV.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(url);
-      })
-      .catch(error => console.error('Download failed:', error));
+  const handleDownloadCV = async () => {
+    try {
+      const response = await fetch('/assets/cv.pdf');
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Abdullah_Noman_CV.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Download failed:', error);
+      // Fallback: open in new tab
+      window.open('/assets/cv.pdf', '_blank');
+    }
   };
   useEffect(() => {
     const handleScroll = () => {
