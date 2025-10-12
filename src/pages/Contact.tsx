@@ -98,9 +98,9 @@ const App: React.FC = () => {
     {
       icon: <Globe className="w-8 h-8 text-neutral-400" />,
       title: 'Website',
-      info: 'https://abnomancv.netlify.app/',
+      info: 'https://abdnomancv.netlify.app/',
       actionText: 'Visit website',
-      href: 'https://abnomancv.netlify.app/'
+      href: 'https://abdnomancv.netlify.app/'
     }
   ];
 
