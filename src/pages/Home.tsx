@@ -12,12 +12,20 @@ const Home = () => {
   }, []);
 
   const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/public/cv.pdf';
-    link.download = 'Abdullah_Noman_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Use fetch to get the file as a blob
+    fetch('/assets/cv.pdf')
+      .then(response => response.blob())
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Abdullah_Noman_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      })
+      .catch(error => console.error('Download failed:', error));
   };
   useEffect(() => {
     const handleScroll = () => {
@@ -180,86 +188,103 @@ const Home = () => {
           }} />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-16 w-full pt-20 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            {/* Left side - Profile Image */}
-            <div className="animate-fadeIn w-40 sm:w-48 md:w-56">
-              <div className="relative group">
-                <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
-                <div className="relative aspect-square rounded-full overflow-hidden border border-white/10 backdrop-blur-sm">
-                  <img
-                    src={profileImage}
-                    alt="Abdullah Noman"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              </div>
+        {/* Hero Section */}
+        <section id="home" className="min-h-screen flex items-center px-4 sm:px-6 lg:px-16 pt-20 relative">
+          {/* Background effects remain the same */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-black/95 to-purple-950/20" />
+            <div className="absolute inset-0">
+              <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob" />
+              <div className="absolute -bottom-8 right-0 w-72 h-72 bg-cyan-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000" />
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-pink-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-4000" />
             </div>
+            <div className="absolute inset-0" style={{
+              backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), 
+                      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)`,
+              backgroundSize: '40px 40px'
+            }} />
+          </div>
 
-            {/* Right side - Content */}
-            <div className="flex-1 space-y-6 text-left">
-              <div className={`transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <p className="text-purple-400 text-lg font-light tracking-wider mb-2">Hi, I'm</p>
-                <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-3">
-                  ABDULLAH<br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 animate-gradient">NOMAN</span>
-                </h1>
-                <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
-              </div>
-
-              <p className={`text-lg text-gray-300 font-light leading-relaxed max-w-2xl transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                Innovating the Future of Textile Manufacturing Through Quality, Sustainability & Technology
-              </p>
-
-              {/* Contact Info */}
-              <div className={`flex flex-wrap gap-6 text-gray-400 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <div className="flex items-center gap-2 group">
-                  <div className="p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all duration-300">
-                    <MapPin className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
+          <div className="max-w-7xl w-full mx-auto relative z-10">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-12">
+              {/* Profile image */}
+              <div className="animate-fadeIn w-32 sm:w-40 lg:w-48 flex-shrink-0">
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                  <div className="relative aspect-square rounded-full overflow-hidden border border-white/10 backdrop-blur-sm">
+                    <img
+                      src={profileImage}
+                      alt="Abdullah Noman"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    />
                   </div>
-                  <span className="text-sm group-hover:text-white transition-colors">Dhaka, Bangladesh</span>
-                </div>
-                <div className="flex items-center gap-2 group">
-                  <div className="p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all duration-300">
-                    <Mail className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
-                  </div>
-                  <span className="text-sm group-hover:text-white transition-colors">abdullahnoman001@gmail.com</span>
                 </div>
               </div>
 
-              {/* Action Buttons */}
-              <div className={`flex flex-wrap items-center gap-4 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              {/* Content */}
+              <div className="flex-1 space-y-4 sm:space-y-5 text-center lg:text-left max-w-3xl">
+                <div className="space-y-2 sm:space-y-3">
+                  <h2 className="text-gray-400 text-sm sm:text-base lg:text-lg font-light tracking-wider animate-fadeIn">
+                    Hi, I'm
+                  </h2>
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight tracking-tight animate-slideUp">
+                    ABDULLAH <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">NOMAN</span>
+                  </h1>
+                  <div className="h-1 w-16 sm:w-20 mx-auto lg:mx-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-scaleIn" />
+                  <p className="text-sm sm:text-base lg:text-lg text-gray-300 font-light leading-relaxed animate-fadeIn opacity-90 px-2 sm:px-0">
+                    Innovating the Future of Textile Manufacturing Through Quality, Sustainability & Technology
+                  </p>
+                </div>
+
+                {/* Contact info */}
+                <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 text-gray-400 animate-fadeIn delay-200 text-xs sm:text-sm">
+                  <div className="flex items-center justify-center lg:justify-start gap-2 group">
+                    <div className="p-1.5 sm:p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all duration-300">
+                      <MapPin className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-purple-400 transition-colors" />
+                    </div>
+                    <span className="font-light group-hover:text-white transition-colors">Dhaka, Bangladesh</span>
+                  </div>
+                  <div className="flex items-center justify-center lg:justify-start gap-2 group">
+                    <div className="p-1.5 sm:p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all duration-300">
+                      <Mail className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-purple-400 transition-colors" />
+                    </div>
+                    <span className="font-light group-hover:text-white transition-colors truncate max-w-[200px] sm:max-w-none">abdullahnoman001@gmail.com</span>
+                  </div>
+                </div>
+
                 {/* Download CV Button */}
-                <button
-                  onClick={handleDownloadCV}
-                  className="inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/50 group"
-                >
-                  <Download className="w-5 h-5 group-hover:animate-bounce" />
-                  <span>Download My CV</span>
-                </button>
+                <div className="animate-fadeIn delay-300">
+                  <button
+                    onClick={handleDownloadCV}
+                    className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/50 group text-sm sm:text-base"
+                  >
+                    <Download className="w-4 h-4 sm:w-5 sm:h-5 group-hover:animate-bounce" />
+                    <span>Download CV</span>
+                  </button>
+                </div>
 
-                {/* Social Links */}
-                <div className="flex gap-3">
-                  <a href="#" className="group">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
-                      <Linkedin className="w-5 h-5" />
+                {/* Social links */}
+                <div className="flex justify-center lg:justify-start gap-3 animate-fadeIn delay-300">
+                  <a href="https://linkedin.com" className="group">
+                    <div className="p-2 sm:p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
+                      <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                   </a>
-                  <a href="#" className="group">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
-                      <Github className="w-5 h-5" />
+                  <a href="https://github.com" className="group">
+                    <div className="p-2 sm:p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
+                      <Github className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                   </a>
-                  <a href="#" className="group">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
-                      <FileText className="w-5 h-5" />
+                  <a href="/resume" className="group">
+                    <div className="p-2 sm:p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
+                      <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                   </a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </section>
 
       {/* About Me */}
