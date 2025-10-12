@@ -208,9 +208,9 @@ const Home = () => {
           </div>
 
           <div className="max-w-7xl w-full mx-auto relative z-10">
-            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-12">
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
               {/* Profile image */}
-              <div className="animate-fadeIn w-32 sm:w-40 lg:w-48 flex-shrink-0">
+              <div className="animate-fadeIn w-36 sm:w-44 md:w-48 lg:w-48 flex-shrink-0">
                 <div className="relative group">
                   <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
                   <div className="relative aspect-square rounded-full overflow-hidden border border-white/10 backdrop-blur-sm">
@@ -224,33 +224,33 @@ const Home = () => {
               </div>
 
               {/* Content */}
-              <div className="flex-1 space-y-4 sm:space-y-5 text-center lg:text-left max-w-3xl">
-                <div className="space-y-2 sm:space-y-3">
-                  <h2 className="text-gray-400 text-sm sm:text-base lg:text-lg font-light tracking-wider animate-fadeIn">
+              <div className="flex-1 space-y-5 sm:space-y-6 text-center lg:text-left max-w-3xl">
+                <div className="space-y-3 sm:space-y-4">
+                  <h2 className="text-gray-400 text-base sm:text-lg lg:text-xl font-light tracking-wider animate-fadeIn">
                     Hi, I'm
                   </h2>
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight tracking-tight animate-slideUp">
+                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight animate-slideUp">
                     ABDULLAH <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">NOMAN</span>
                   </h1>
-                  <div className="h-1 w-16 sm:w-20 mx-auto lg:mx-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-scaleIn" />
-                  <p className="text-sm sm:text-base lg:text-lg text-gray-300 font-light leading-relaxed animate-fadeIn opacity-90 px-2 sm:px-0">
+                  <div className="h-1 w-20 sm:w-24 mx-auto lg:mx-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-scaleIn" />
+                  <p className="text-base sm:text-lg lg:text-xl text-gray-300 font-light leading-relaxed animate-fadeIn opacity-90 px-4 sm:px-0">
                     Innovating the Future of Textile Manufacturing Through Quality, Sustainability & Technology
                   </p>
                 </div>
 
                 {/* Contact info */}
-                <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 text-gray-400 animate-fadeIn delay-200 text-xs sm:text-sm">
-                  <div className="flex items-center justify-center lg:justify-start gap-2 group">
-                    <div className="p-1.5 sm:p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all duration-300">
-                      <MapPin className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-purple-400 transition-colors" />
+                <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-6 text-gray-400 animate-fadeIn delay-200">
+                  <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-3 group">
+                    <div className="p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all duration-300">
+                      <MapPin className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-purple-400 transition-colors" />
                     </div>
-                    <span className="font-light group-hover:text-white transition-colors">Dhaka, Bangladesh</span>
+                    <span className="text-sm sm:text-base font-light group-hover:text-white transition-colors">Dhaka, Bangladesh</span>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start gap-2 group">
-                    <div className="p-1.5 sm:p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all duration-300">
-                      <Mail className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-purple-400 transition-colors" />
+                  <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-3 group">
+                    <div className="p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all duration-300">
+                      <Mail className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-purple-400 transition-colors" />
                     </div>
-                    <span className="font-light group-hover:text-white transition-colors truncate max-w-[200px] sm:max-w-none">abdullahnoman001@gmail.com</span>
+                    <span className="text-sm sm:text-base font-light group-hover:text-white transition-colors break-all sm:break-normal">abdullahnoman001@gmail.com</span>
                   </div>
                 </div>
 
@@ -258,28 +258,28 @@ const Home = () => {
                 <div className="animate-fadeIn delay-300">
                   <button
                     onClick={handleDownloadCV}
-                    className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/50 group text-sm sm:text-base"
+                    className="inline-flex items-center gap-3 px-8 py-3.5 sm:py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/50 group text-base sm:text-lg"
                   >
-                    <Download className="w-4 h-4 sm:w-5 sm:h-5 group-hover:animate-bounce" />
+                    <Download className="w-5 h-5 sm:w-6 sm:h-6 group-hover:animate-bounce" />
                     <span>Download CV</span>
                   </button>
                 </div>
 
                 {/* Social links */}
-                <div className="flex justify-center lg:justify-start gap-3 animate-fadeIn delay-300">
+                <div className="flex justify-center lg:justify-start gap-3 sm:gap-4 animate-fadeIn delay-300">
                   <a href="https://linkedin.com" className="group">
-                    <div className="p-2 sm:p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
-                      <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
+                      <Linkedin className="w-5 h-5" />
                     </div>
                   </a>
                   <a href="https://github.com" className="group">
-                    <div className="p-2 sm:p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
-                      <Github className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
+                      <Github className="w-5 h-5" />
                     </div>
                   </a>
                   <a href="/resume" className="group">
-                    <div className="p-2 sm:p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
-                      <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
+                      <FileText className="w-5 h-5" />
                     </div>
                   </a>
                 </div>
