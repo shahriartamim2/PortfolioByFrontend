@@ -128,7 +128,7 @@ const Home = () => {
   ];
 
   const achievements = [
-    'Published research paper on firber & Yarn recycling technologies',
+    'Completed a thesis on fiber & Yarn recycling technologies',
   ];
 
   return (
@@ -261,25 +261,20 @@ const Home = () => {
                     className="inline-flex items-center gap-3 px-8 py-3.5 sm:py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/50 group text-base sm:text-lg"
                   >
                     <Download className="w-5 h-5 sm:w-6 sm:h-6 group-hover:animate-bounce" />
-                    <span>Download CV</span>
+                    <span>Download My CV</span>
                   </button>
                 </div>
 
                 {/* Social links */}
                 <div className="flex justify-center lg:justify-start gap-3 sm:gap-4 animate-fadeIn delay-300">
-                  <a href="https://linkedin.com" className="group">
+                  <a href='https://www.linkedin.com/in/me-noman/' className="group">
                     <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
-                      <Linkedin className="w-5 h-5" />
+                      <Linkedin href='' className="w-5 h-5" />
                     </div>
                   </a>
-                  <a href="https://github.com" className="group">
+                  <a href="https://github.com/shahriartamim2'" className="group">
                     <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
                       <Github className="w-5 h-5" />
-                    </div>
-                  </a>
-                  <a href="/resume" className="group">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
-                      <FileText className="w-5 h-5" />
                     </div>
                   </a>
                 </div>

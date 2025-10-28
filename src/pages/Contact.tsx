@@ -100,7 +100,7 @@ const App: React.FC = () => {
       title: 'Website',
       info: 'https://abdnomancv.netlify.app/',
       actionText: 'Visit website',
-      href: 'https://abdnomancv.netlify.app/'
+      href: 'https://abdullahnomancv.netlify.app/'
     }
   ];
 
