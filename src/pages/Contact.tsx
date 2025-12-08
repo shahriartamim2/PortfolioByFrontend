@@ -112,34 +112,7 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="bg-neutral-950 text-neutral-100 min-h-screen font-sans antialiased">
-      <div className="relative isolate overflow-hidden">
-        {/* Decorative background gradients */}
-        <svg
-          className="absolute inset-0 -z-10 h-full w-full stroke-neutral-800/40 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-          aria-hidden="true"
-        >
-          <defs>
-            <pattern
-              id="83fd4e5a-9d52-4224-87a9-60460324c537"
-              width="200"
-              height="200"
-              x="50%"
-              y="-1"
-              patternUnits="userSpaceOnUse"
-            >
-              <path d="M100 200V.5M.5 .5H200" fill="none" />
-            </pattern>
-          </defs>
-          <svg x="50%" y="-1" className="overflow-visible fill-neutral-900/40">
-            <path
-              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-              strokeWidth="0"
-            />
-          </svg>
-          <rect width="100%" height="100%" strokeWidth="0" fill="url(#83fd4e5a-9d52-4224-87a9-60460324c537)" />
-        </svg>
-
+    <div className="text-neutral-100 font-sans antialiased">
         <div className="container mx-auto px-4 sm:px-6 pt-20 pb-12 sm:py-24 lg:px-8">
           <header className="text-center mb-12 md:mb-20">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Contact Us</h1>
@@ -192,7 +165,6 @@ const App: React.FC = () => {
           </footer>
 
         </div>
-      </div>
     </div>
   );
 }

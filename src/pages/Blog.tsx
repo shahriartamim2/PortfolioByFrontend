@@ -114,10 +114,7 @@ interface BlogDetailProps {
 
 const BlogDetail: React.FC<BlogDetailProps> = ({ blog, onBack }) => {
   return (
-    <div className="min-h-screen bg-black">
-      <div className="hidden md:block fixed left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
-      <div className="hidden md:block fixed right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
-
+    <div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 pt-20 pb-8 sm:py-20 md:py-24">
         <button
           onClick={onBack}
@@ -182,10 +179,7 @@ const Blog: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="hidden md:block fixed left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
-      <div className="hidden md:block fixed right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
-
+    <div className="text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 pt-20 pb-16 sm:py-20 md:py-24">
         <header className="mb-8 sm:mb-12 md:mb-16 text-center sm:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2 sm:mb-4">Blog</h1>
