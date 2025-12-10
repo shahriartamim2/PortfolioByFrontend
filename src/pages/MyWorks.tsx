@@ -9,7 +9,7 @@ const works: ContentItem[] = [
         description: "A web application to search and discover books. Built with React and modern web technologies.",
         image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=500&fit=crop",
         category: "Web App",
-        link: "https://ebd-finder.vercel.app/book-finder"
+        link: "https://ebd-finder.vercel.app/"
     },
     {
         id: 2,
