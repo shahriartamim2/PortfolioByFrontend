@@ -1,114 +1,61 @@
 import React, { useState } from 'react';
-
-// Type definitions
-interface BlogPost {
-  id: number;
-  title: string;
-  description: string;
-  date: string;
-  image: string;
-  category: string;
-}
+import ContentCard, { ContentItem } from '../components/ContentCard';
 
 // Sample blog data
-const blogPosts: BlogPost[] = [
+const blogPosts: ContentItem[] = [
   {
     id: 1,
-    title: "Getting Started with React and Tailwind CSS",
-    description: "Learn how to build modern, responsive web applications using React and Tailwind CSS. This comprehensive guide covers everything from setup to deployment.",
-    date: "Oct 8, 2025",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=500&fit=crop",
-    category: "Development"
+    title: "Mechanical Recycling of Garments Waste into Fiber",
+    description: "Exploring the process of converting textile waste back into usable fibers, reducing environmental impact and promoting a circular economy in the fashion industry.",
+    date: "Dec 10, 2025",
+    image: "https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=800&h=500&fit=crop",
+    category: "Sustainability"
   },
   {
     id: 2,
-    title: "The Future of Web Design",
-    description: "Explore emerging trends in web design including glassmorphism, micro-interactions, and immersive 3D experiences that are shaping the future.",
-    date: "Oct 5, 2025",
-    image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=500&fit=crop",
-    category: "Design"
+    title: "Automation in Textile Sector",
+    description: "How robotics and automated systems are revolutionizing textile manufacturing, from spinning to garment construction, increasing efficiency and precision.",
+    date: "Dec 5, 2025",
+    image: "https://images.unsplash.com/photo-1636986056375-184676d8ca14?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Technology"
   },
   {
     id: 3,
-    title: "Building Scalable Applications",
-    description: "Discover best practices for architecting scalable applications that can handle millions of users while maintaining performance and reliability.",
-    date: "Oct 1, 2025",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop",
-    category: "Architecture"
+    title: "AI in Textile",
+    description: "The role of Artificial Intelligence in quality control, trend forecasting, and supply chain optimization within the textile industry.",
+    date: "Nov 28, 2025",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=500&fit=crop",
+    category: "Innovation"
   },
   {
     id: 4,
-    title: "Mastering CSS Grid and Flexbox",
-    description: "Deep dive into modern CSS layout techniques. Learn when to use Grid vs Flexbox and how to create complex responsive layouts with ease.",
-    date: "Sep 28, 2025",
-    image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=800&h=500&fit=crop",
-    category: "CSS"
+    title: "Sustainable Dyeing Techniques",
+    description: "Investigating waterless dyeing technologies and natural dyes to minimize the environmental footprint of textile coloration processes.",
+    date: "Nov 15, 2025",
+    image: "https://images.unsplash.com/photo-1655122878062-a9e885391a1b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGV4dGlsZSUyMG1hY2hpbmV8ZW58MHx8MHx8fDA%3D",
+    category: "Sustainability"
   },
   {
     id: 5,
-    title: "State Management in Modern React",
-    description: "Compare different state management solutions including Context API, Redux, and Zustand. Find the right tool for your project needs.",
-    date: "Sep 25, 2025",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop",
-    category: "React"
+    title: "Smart Fabrics and Wearables",
+    description: "The integration of electronics into textiles to create smart fabrics that can monitor health, change color, or harvest energy.",
+    date: "Nov 10, 2025",
+    image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&h=500&fit=crop",
+    category: "Future Tech"
   },
   {
     id: 6,
-    title: "API Design Best Practices",
-    description: "Learn how to design RESTful APIs that are intuitive, maintainable, and scalable. Includes real-world examples and common pitfalls to avoid.",
-    date: "Sep 20, 2025",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-    category: "Backend"
+    title: "The Future of Fast Fashion",
+    description: "Analyzing the shift towards slow fashion and how consumer behavior and regulations are reshaping the global textile market.",
+    date: "Nov 1, 2025",
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&h=500&fit=crop",
+    category: "Industry Trends"
   }
 ];
 
-// Blog Card Component
-interface BlogCardProps {
-  post: BlogPost;
-  onClick: (post: BlogPost) => void;
-}
-
-const BlogCard: React.FC<BlogCardProps> = ({ post, onClick }) => {
-  return (
-    <article
-      onClick={() => onClick(post)}
-      className="group cursor-pointer bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl overflow-hidden hover:bg-white/10 hover:border-white/20 transition-all duration-300 active:scale-98 transform"
-    >
-      <div className="relative overflow-hidden aspect-video">
-        <img
-          src={post.image}
-          alt={post.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          loading="lazy"
-        />
-        <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
-          <span className="px-2 sm:px-3 py-1 bg-black/60 backdrop-blur-sm text-white/90 text-xs rounded-full border border-white/20">
-            {post.category}
-          </span>
-        </div>
-      </div>
-
-      <div className="p-4 sm:p-5 md:p-6">
-        <time className="text-xs sm:text-sm text-white/40">{post.date}</time>
-        <h2 className="text-lg sm:text-xl font-semibold text-white mt-2 mb-2 sm:mb-3 group-hover:text-white/90 transition-colors leading-snug line-clamp-2">
-          {post.title}
-        </h2>
-        <p className="text-white/60 text-sm sm:text-base leading-relaxed line-clamp-2 sm:line-clamp-3">
-          {post.description}
-        </p>
-
-        <div className="mt-3 sm:mt-4 flex items-center text-white/50 group-hover:text-white/80 transition-colors">
-          <span className="text-xs sm:text-sm font-medium">Read more</span>
-          <span className="ml-2 text-sm group-hover:translate-x-1 transition-transform">→</span>
-        </div>
-      </div>
-    </article>
-  );
-};
-
 // Blog Detail Component
 interface BlogDetailProps {
-  blog: BlogPost;
+  blog: ContentItem;
   onBack: () => void;
 }
 
@@ -162,9 +109,9 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog, onBack }) => {
 
 // Main Blog Page Component
 const Blog: React.FC = () => {
-  const [selectedBlog, setSelectedBlog] = useState<BlogPost | null>(null);
+  const [selectedBlog, setSelectedBlog] = useState<ContentItem | null>(null);
 
-  const handleBlogClick = (post: BlogPost): void => {
+  const handleBlogClick = (post: ContentItem): void => {
     setSelectedBlog(post);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -183,12 +130,12 @@ const Blog: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 pt-20 pb-16 sm:py-20 md:py-24">
         <header className="mb-8 sm:mb-12 md:mb-16 text-center sm:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2 sm:mb-4">Blog</h1>
-          <p className="text-white/60 text-base sm:text-lg md:text-xl">Thoughts, ideas, and insights</p>
+          <p className="text-white/60 text-base sm:text-lg md:text-xl">Insights on Textile Engineering & Technology</p>
         </header>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
-          {blogPosts.map((post: BlogPost) => (
-            <BlogCard key={post.id} post={post} onClick={handleBlogClick} />
+          {blogPosts.map((post: ContentItem) => (
+            <ContentCard key={post.id} item={post} onClick={handleBlogClick} />
           ))}
         </div>
       </div>

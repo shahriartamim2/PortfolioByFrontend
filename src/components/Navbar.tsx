@@ -34,6 +34,14 @@ export default function Navbar() {
                 <span className="relative z-10">Blog</span>
             </NavLink>
             <NavLink
+                to="/works"
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }: { isActive: boolean }) => `text-white/80 font-medium transition-all duration-300 relative group px-4 py-2 rounded-full ${isActive ? 'text-white bg-white/5' : 'hover:text-white hover:bg-white/5'}`}
+            >
+                <span className="absolute inset-0 rounded-full bg-white/0 group-hover:bg-white/10 transition-all duration-300" />
+                <span className="relative z-10">My Works</span>
+            </NavLink>
+            <NavLink
                 to="/contact"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }: { isActive: boolean }) => `text-white/80 font-medium transition-all duration-300 relative group px-4 py-2 rounded-full ${isActive ? 'text-white bg-white/5' : 'hover:text-white hover:bg-white/5'}`}

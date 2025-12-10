@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 
 const Home = lazy(() => import('./pages/Home'))
 const Blog = lazy(() => import('./pages/Blog'))
+const MyWorks = lazy(() => import('./pages/MyWorks'))
 const Contact = lazy(() => import('./pages/Contact'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
@@ -12,6 +13,7 @@ export default function AppRoutes() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/works" element={<MyWorks />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
