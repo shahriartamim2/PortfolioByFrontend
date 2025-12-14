@@ -202,7 +202,7 @@ const Home = () => {
                   <Linkedin href='' className="w-5 h-5" />
                 </div>
               </a>
-              <a href="https://github.com/shahriartamim2'" className="group">
+              <a href="https://github.com/shahriartamim2" className="group">
                 <div className="p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-white/10 hover:border-purple-500/50 backdrop-blur-sm">
                   <Github className="w-5 h-5" />
                 </div>

@@ -120,11 +120,10 @@ const WorkDetail: React.FC<WorkDetailProps> = ({ work, onBack }) => {
                     {work.sections && work.sections.length > 0 && (
                         <div className="space-y-16 sm:space-y-24">
                             {work.sections.map((section, index) => (
-                                <div 
-                                    key={index} 
-                                    className={`flex flex-col lg:flex-row gap-8 lg:gap-16 items-center ${
-                                        index % 2 === 0 ? '' : 'lg:flex-row-reverse'
-                                    }`}
+                                <div
+                                    key={index}
+                                    className={`flex flex-col lg:flex-row gap-8 lg:gap-16 items-center ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'
+                                        }`}
                                 >
                                     {/* Text Side */}
                                     <div className="flex-1 space-y-4 w-full">

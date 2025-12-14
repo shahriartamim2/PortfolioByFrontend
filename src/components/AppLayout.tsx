@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export function AppWrapper({ children }: { children: React.ReactNode }) {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -37,7 +37,7 @@ export function AppWrapper({ children }: { children: React.ReactNode }) {
                     }} />
 
                     {/* Spotlight Grid overlay (Bright) */}
-                    <div 
+                    <div
                         className="hidden sm:block absolute inset-0 transition-opacity duration-300"
                         style={{
                             backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.3) 1px, transparent 1px), 
@@ -45,7 +45,7 @@ export function AppWrapper({ children }: { children: React.ReactNode }) {
                             backgroundSize: '30px 30px',
                             maskImage: `radial-gradient(300px circle at ${mousePosition.x}px ${mousePosition.y}px, black, transparent)`,
                             WebkitMaskImage: `radial-gradient(300px circle at ${mousePosition.x}px ${mousePosition.y}px, black, transparent)`
-                        }} 
+                        }}
                     />
                 </div>
 
