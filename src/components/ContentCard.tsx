@@ -1,11 +1,19 @@
 import React from 'react';
 
+export interface ContentSection {
+    title?: string;
+    description: string;
+    image: string;
+}
+
 export interface ContentItem {
     id: number;
     title: string;
     description: string;
     date?: string;
     image: string;
+    images?: string[]; // Optional array of additional images
+    sections?: ContentSection[]; // Optional sections for detailed view with alternating layout
     category: string;
     link?: string; // Optional link for external works
 }
