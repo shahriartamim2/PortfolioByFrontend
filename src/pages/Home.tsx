@@ -137,7 +137,7 @@ const Home = () => {
 
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center px-0 sm:px-6 lg:px-16 pt-24 sm:pt-20 relative">          <div className="max-w-7xl w-full mx-auto relative z-10">
+      <section id="home" className="min-h-screen flex items-center px-0 sm:px-6 lg:px-16 pt-32 sm:pt-32 relative">          <div className="max-w-7xl w-full mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           {/* Profile image */}
           <div className="animate-fadeIn w-36 sm:w-44 md:w-48 lg:w-48 flex-shrink-0">
