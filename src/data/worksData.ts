@@ -1,4 +1,8 @@
 import { ContentItem } from '../components/ContentCard';
+import MerchMateImage1 from '../images/landing.jpg';
+import MerchMateImage2 from '../images/history.jpg';
+import MerchMateImage3 from '../images/input.jpg';
+import MerchMateImage4 from '../images/result.jpg';
 
 export const works: ContentItem[] = [
     {
@@ -80,12 +84,12 @@ export const works: ContentItem[] = [
         id: 3,
         title: "MerchMate - Professional FOB Costing Calculator",
         description: "A comprehensive FOB (Free on Board) costing calculator for the garment manufacturing industry. Calculate accurate costs for T-Shirts, Shirts, Jeans with detailed fabric consumption and profit margin analysis.",
-        image: "/src/images/landing.jpg",
+        image: MerchMateImage1,
         images: [
-            "/src/images/landing.jpg",
-            "/src/images/history.jpg",
-            "/src/images/input.jpg",
-            "/src/images/result.jpg",
+            MerchMateImage1,
+            MerchMateImage2,
+            MerchMateImage3,
+            MerchMateImage4
         ],
         sections: [
             {
