@@ -43,12 +43,7 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog, onBack }) => {
             <p className="text-white/70 text-base sm:text-lg leading-relaxed">
               {blog.description}
             </p>
-            <p className="text-white/70 text-base sm:text-lg leading-relaxed mt-4 sm:mt-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p className="text-white/70 text-base sm:text-lg leading-relaxed mt-4 sm:mt-6">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            
           </div>
         </article>
       </div>
