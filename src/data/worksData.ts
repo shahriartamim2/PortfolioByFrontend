@@ -119,6 +119,6 @@ export const works: ContentItem[] = [
             }
         ],
         category: "Mobile App",
-        link: "https://github.com/abdnoman001/Merch-Mate"
+        link: "https://www.linkedin.com/posts/activity-7410773504008204288-oCa7?utm_source=share&utm_medium=member_android&rcm=ACoAADED-aMB8NNHatajjLlEjbKXTA9C5_tsLAM"
     },
 ];
