@@ -46,7 +46,7 @@ export const blogPosts: ContentItem[] = [
         title: "The Future of Fast Fashion",
         description: "Analyzing the shift towards slow fashion and how consumer behavior and regulations are reshaping the global textile market.",
         date: "Nov 1, 2025",
-        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&h=500&fit=crop",
+        image: "https://unsplash.com/photos/a-pile-of-clothes-sitting-on-top-of-a-white-table-ZSasn1S7d8o",
         category: "Industry Trends"
     }
 ];
