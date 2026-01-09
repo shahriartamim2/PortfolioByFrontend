@@ -1,7 +1,7 @@
 import { ContentItem } from '../components/ContentCard';
-import MerchMateImage1 from '../images/landing.jpg';
 import MerchMateImage2 from '../images/history.jpg';
 import MerchMateImage3 from '../images/input.jpg';
+import MerchMateImage1 from '../images/landing.jpg';
 import MerchMateImage4 from '../images/result.jpg';
 
 export const works: ContentItem[] = [

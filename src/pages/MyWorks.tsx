@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ContentCard, { ContentItem } from '../components/ContentCard';
-import { works } from '../data/worksData';
 import SEO from '../components/SEO';
+import { works } from '../data/worksData';
 
 const MyWorks: React.FC = () => {
     const navigate = useNavigate();

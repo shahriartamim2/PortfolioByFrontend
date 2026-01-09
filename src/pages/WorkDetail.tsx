@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { works } from '../data/worksData';
+import React, { useCallback, useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { works } from '../data/worksData';
 
 const WorkDetail: React.FC = () => {
     const { workId } = useParams<{ workId: string }>();

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ContentCard, { ContentItem } from '../components/ContentCard';
-import { blogPosts } from '../data/blogData';
 import SEO from '../components/SEO';
+import { blogPosts } from '../data/blogData';
 
 const Blog: React.FC = () => {
   const navigate = useNavigate();
