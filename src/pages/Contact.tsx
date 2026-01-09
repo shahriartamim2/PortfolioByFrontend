@@ -1,5 +1,6 @@
 import { Globe, Mail } from 'lucide-react';
 import React from 'react';
+import SEO from '../components/SEO';
 
 // --- TYPE DEFINITIONS ---
 
@@ -113,6 +114,12 @@ const App: React.FC = () => {
 
   return (
     <div className="text-neutral-100 font-sans antialiased">
+      <SEO
+        title="Contact"
+        description="Get in touch with Abdullah Noman. Connect via email, LinkedIn, GitHub, or other social platforms for collaborations, projects, or inquiries about textile engineering and software development."
+        keywords="Contact, Abdullah Noman Contact, Email, LinkedIn, GitHub, Social Media, Connect"
+        canonicalUrl="/contact"
+      />
       <div className="container mx-auto px-4 sm:px-6 pt-32 pb-12 sm:py-24 lg:px-8">
         <header className="text-center mb-12 md:mb-20">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Contact Us</h1>

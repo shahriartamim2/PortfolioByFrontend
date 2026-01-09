@@ -121,4 +121,52 @@ export const works: ContentItem[] = [
         category: "Mobile App",
         link: "https://github.com/abdnoman001/Merch-Mate"
     },
+    {
+        id: 4,
+        title: "Lab Dip & Shade Intelligence",
+        description: "A production-ready Electron desktop application for Bangladesh textile dyeing labs. Digitizes lab dip recipe management, tracks shade quality with ΔE measurements, and reduces approval cycles by replacing Excel-based workflows with an intelligent offline system.",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop",
+        images: [
+            "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1604754742629-3e5728249d73?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1581092918484-8313e1f3f5e5?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=600&fit=crop"
+        ],
+        sections: [
+            {
+                title: "Lab Dip Recipe Management",
+                description: "Digital recipe versioning system with locking mechanisms and comprehensive history tracking. Replaces error-prone Excel sheets with a structured database approach, ensuring recipe consistency and auditability across the production lifecycle.",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop"
+            },
+            {
+                title: "ΔE Tracking & Shade Evaluation",
+                description: "Objective colorimetric measurement tracking using industry-standard ΔE values. Tracks shade quality across multiple iterations, enabling data-driven decisions for dye recipe adjustments and buyer approval workflows.",
+                image: "https://images.unsplash.com/photo-1604754742629-3e5728249d73?w=800&h=600&fit=crop"
+            },
+            {
+                title: "Shade Correction Intelligence",
+                description: "Rule-based correction suggestion system that analyzes historical data and current measurements to recommend optimal dye adjustments. Reduces trial-and-error iterations and accelerates shade matching for lab technicians.",
+                image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop"
+            },
+            {
+                title: "Approval Workflow & Analytics",
+                description: "Complete buyer approval process tracking with audit trails and historical success probability analysis. Provides data-driven risk assessment for approval likelihood based on past performance, helping prioritize critical orders.",
+                image: "https://images.unsplash.com/photo-1581092918484-8313e1f3f5e5?w=800&h=600&fit=crop"
+            },
+            {
+                title: "Enterprise-Grade Technical Stack",
+                description: "Built with Electron 28 for cross-platform desktop deployment, React 18 + TypeScript for robust UI, SQLite for local data with PostgreSQL support for enterprise. Features role-based access control (Admin, R&D Manager, QA, Lab Technician), bcrypt encryption, and PDF/Excel export capabilities using PDFKit and XLSX libraries.",
+                image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=600&fit=crop"
+            },
+            {
+                title: "Offline-First Architecture",
+                description: "Fully functional without network connectivity, designed for factory-floor use in Bangladesh textile laboratories. Local encrypted password storage, complete database schema with 15+ tables, and comprehensive audit logging ensure data integrity and security.",
+                image: "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=600&fit=crop"
+            }
+        ],
+        category: "Desktop App",
+        link: "https://github.com/abdnoman001/Lab-dip---Shade-Intelligence"
+    },
 ];

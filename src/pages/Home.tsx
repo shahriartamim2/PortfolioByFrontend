@@ -1,6 +1,7 @@
-import { Award, Briefcase, Code, Download, Github, GraduationCap, Linkedin, Mail, MapPin, TrendingUp, Trophy } from 'lucide-react';
+import { Award, Briefcase, Code, ExternalLink, Github, GraduationCap, Linkedin, Mail, MapPin, TrendingUp, Trophy } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import profileImage from '../images/profile.jpg';
+import SEO from '../components/SEO';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -11,24 +12,12 @@ const Home = () => {
     setIsVisible(true);
   }, []);
 
-  const handleDownloadCV = async () => {
-    try {
-      const response = await fetch('/cv.pdf');
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'Abdullah_Noman_CV.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error('Download failed:', error);
-      // Fallback: open in new tab
-      window.open('/assets/cv.pdf', '_blank');
-    }
+  const handleViewCV = () => {
+    // Replace this URL with your actual Google Drive shareable link
+    const googleDriveLink = 'https://drive.google.com/file/d/YOUR_FILE_ID/view';
+    window.open(googleDriveLink, '_blank', 'noopener,noreferrer');
   };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -133,6 +122,12 @@ const Home = () => {
 
   return (
     <div className="text-white relative">
+      <SEO
+        title="About"
+        description="Learn more about Abdullah Noman, a Textile Engineer specializing in quality control, sustainable manufacturing, and innovative textile solutions. Experienced in dyeing technology, fabric analysis, and process optimization."
+        keywords="Abdullah Noman, Textile Engineer, Quality Control, Sustainable Manufacturing, Dyeing Technology, Fabric Analysis, BUTEX, Bangladesh Textiles"
+        canonicalUrl="/about"
+      />
 
 
 
@@ -184,14 +179,14 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Download CV Button */}
+            {/* View CV Button */}
             <div className="animate-fadeIn delay-300">
               <button
-                onClick={handleDownloadCV}
+                onClick={handleViewCV}
                 className="inline-flex items-center gap-3 px-8 py-3.5 sm:py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/50 group text-base sm:text-lg"
               >
-                <Download className="w-5 h-5 sm:w-6 sm:h-6 group-hover:animate-bounce" />
-                <span>Download My CV</span>
+                <ExternalLink className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <span>View My CV</span>
               </button>
             </div>
 

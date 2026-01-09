@@ -1,76 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import ContentCard, { ContentItem } from '../components/ContentCard';
 import { blogPosts } from '../data/blogData';
+import SEO from '../components/SEO';
 
-// Blog Detail Component
-interface BlogDetailProps {
-  blog: ContentItem;
-  onBack: () => void;
-}
-
-const BlogDetail: React.FC<BlogDetailProps> = ({ blog, onBack }) => {
-  return (
-    <div>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 pt-20 pb-8 sm:py-20 md:py-24">
-        <button
-          onClick={onBack}
-          className="text-white/60 hover:text-white transition-colors mb-6 sm:mb-8 flex items-center gap-2 group active:scale-95 transform"
-        >
-          <span className="group-hover:-translate-x-1 transition-transform text-lg sm:text-base">←</span>
-          <span className="text-sm sm:text-base">Back to Blogs</span>
-        </button>
-
-        <article className="space-y-6 sm:space-y-8">
-          <header>
-            <time className="text-xs sm:text-sm text-white/40">{blog.date}</time>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-2 mb-3 sm:mb-4 leading-tight">
-              {blog.title}
-            </h1>
-            <span className="inline-block px-3 py-1 bg-white/10 text-white/80 text-xs sm:text-sm rounded-full">
-              {blog.category}
-            </span>
-          </header>
-
-          <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-white/10">
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="w-full h-56 sm:h-72 md:h-96 object-cover"
-            />
-          </div>
-
-          <div className="prose prose-invert max-w-none">
-            <p className="text-white/70 text-base sm:text-lg leading-relaxed">
-              {blog.description}
-            </p>
-            
-          </div>
-        </article>
-      </div>
-    </div>
-  );
-};
-
-// Main Blog Page Component
 const Blog: React.FC = () => {
-  const [selectedBlog, setSelectedBlog] = useState<ContentItem | null>(null);
+  const navigate = useNavigate();
 
   const handleBlogClick = (post: ContentItem): void => {
-    setSelectedBlog(post);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate(`/blog/${post.id}`);
   };
-
-  const handleBackClick = (): void => {
-    setSelectedBlog(null);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  if (selectedBlog) {
-    return <BlogDetail blog={selectedBlog} onBack={handleBackClick} />;
-  }
 
   return (
     <div className="text-white">
+      <SEO
+        title="Blog"
+        description="Read insights and articles about textile engineering, sustainable manufacturing, AI in textiles, smart fabrics, and the future of fashion industry by Abdullah Noman."
+        keywords="Textile Engineering Blog, Sustainable Textiles, AI in Textiles, Smart Fabrics, Fashion Technology, Industry Insights"
+        canonicalUrl="/blog"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 pt-32 pb-16 sm:py-20 md:py-24">
         <header className="mb-8 sm:mb-12 md:mb-16 text-center sm:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2 sm:mb-4">Blog</h1>
