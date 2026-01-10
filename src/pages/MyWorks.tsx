@@ -7,6 +7,8 @@ import { works } from '../data/worksData';
 const MyWorks: React.FC = () => {
     const navigate = useNavigate();
 
+    console.log('MyWorks component rendering', { works });
+
     const handleWorkClick = (work: ContentItem): void => {
         navigate(`/works/${work.id}`);
     };
