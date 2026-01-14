@@ -109,7 +109,7 @@ const App: React.FC = () => {
     { type: 'github', href: 'https://github.com/shahriartamim2' },
     { type: 'linkedin', href: 'https://www.linkedin.com/in/me-noman/' },
     { type: 'twitter', href: '#' },
-    { type: 'facebook', href: 'https://www.facebook.com/shahriartamim2/' },
+    { type: 'facebook', href: 'https://www.facebook.com/abdnoman001' },
   ];
 
   return (
