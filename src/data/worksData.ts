@@ -1,95 +1,106 @@
 import { ContentItem } from '../components/ContentCard';
-import MerchMateImage2 from '../images/history.jpg';
-import MerchMateImage3 from '../images/input.jpg';
-import MerchMateImage1 from '../images/landing.jpg';
-import MerchMateImage4 from '../images/result.jpg';
+import Merchmate1 from '../images/merchmate/merchmate1.jpeg';
+import MerchMate2 from '../images/merchmate/merchmate2.jpeg';
+import MerchMate3 from '../images/merchmate/fob1.jpeg';
+import MerchMate4 from '../images/merchmate/fob2.jpeg';
+import MerchMate5 from '../images/merchmate/fa1.jpeg';
+import MerchMate6 from '../images/merchmate/fa2.jpeg';
+import MerchMate7 from '../images/merchmate/pdf.png';
+import MerchMate8 from '../images/merchmate/excel.png';
+import Lab1 from '../images/labdip/lab1.jpeg';
+import Lab2 from '../images/labdip/lab2.jpeg';
 
 export const works: ContentItem[] = [
-    {
-        id: 1,
-        title: "Book Finder",
-        description: "A web application to search and discover books. Built with React and modern web technologies.",
-        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=500&fit=crop",
-        images: [
-            "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1507842217121-9e93c8aaf27c?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&h=600&fit=crop"
-        ],
-        sections: [
-            {
-                title: "Search Functionality",
-                description: "Users can easily search for books by title, author, or ISBN. The search results are displayed instantly with relevant book covers and details.",
-                image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&h=600&fit=crop"
-            },
-            {
-                title: "Book Details",
-                description: "Clicking on a book reveals comprehensive information including the synopsis, publication date, page count, and user ratings.",
-                image: "https://images.unsplash.com/photo-1507842217121-9e93c8aaf27c?w=800&h=600&fit=crop"
-            },
-            {
-                title: "Responsive Design",
-                description: "The application is fully responsive, ensuring a seamless experience across desktop, tablet, and mobile devices.",
-                image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&h=600&fit=crop"
-            },
-            {
-                title: "User Interface",
-                description: "A clean and intuitive user interface designed to make book discovery effortless and enjoyable.",
-                image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800&h=600&fit=crop"
-            },
-            {
-                title: "Performance",
-                description: "Optimized for speed and performance, providing quick load times and smooth interactions.",
-                image: "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=800&h=600&fit=crop"
-            }
-        ],
-        category: "Web App",
-        link: "https://ebd-finder.vercel.app/"
-    },
-    {
-        id: 2,
-        title: "Portfolio Website",
-        description: "A personal portfolio website showcasing my skills, projects, and blog posts. Designed with a modern aesthetic.",
-        image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&h=500&fit=crop",
-        images: [
-            "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop"
-        ],
-        sections: [
-            {
-                title: "Modern Design",
-                description: "Featuring a sleek, dark-themed design with glassmorphism effects and smooth animations.",
-                image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop"
-            },
-            {
-                title: "Responsive Layout",
-                description: "Built with Tailwind CSS to ensure the site looks great on all screen sizes.",
-                image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop"
-            },
-            {
-                title: "Dynamic Content",
-                description: "Includes a dynamic blog and works section to easily showcase new content.",
-                image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=800&h=600&fit=crop"
-            }
-        ],
-        category: "Website"
-    },
+    // {
+    //     id: 1,
+    //     title: "Book Finder",
+    //     description: "A web application to search and discover books. Built with React and modern web technologies.",
+    //     image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=500&fit=crop",
+    //     images: [
+    //         "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1507842217121-9e93c8aaf27c?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&h=600&fit=crop"
+    //     ],
+    //     sections: [
+    //         {
+    //             title: "Search Functionality",
+    //             description: "Users can easily search for books by title, author, or ISBN. The search results are displayed instantly with relevant book covers and details.",
+    //             image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&h=600&fit=crop"
+    //         },
+    //         {
+    //             title: "Book Details",
+    //             description: "Clicking on a book reveals comprehensive information including the synopsis, publication date, page count, and user ratings.",
+    //             image: "https://images.unsplash.com/photo-1507842217121-9e93c8aaf27c?w=800&h=600&fit=crop"
+    //         },
+    //         {
+    //             title: "Responsive Design",
+    //             description: "The application is fully responsive, ensuring a seamless experience across desktop, tablet, and mobile devices.",
+    //             image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&h=600&fit=crop"
+    //         },
+    //         {
+    //             title: "User Interface",
+    //             description: "A clean and intuitive user interface designed to make book discovery effortless and enjoyable.",
+    //             image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800&h=600&fit=crop"
+    //         },
+    //         {
+    //             title: "Performance",
+    //             description: "Optimized for speed and performance, providing quick load times and smooth interactions.",
+    //             image: "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=800&h=600&fit=crop"
+    //         }
+    //     ],
+    //     category: "Web App",
+    //     link: "https://ebd-finder.vercel.app/"
+    // },
+    // {
+    //     id: 2,
+    //     title: "Portfolio Website",
+    //     description: "A personal portfolio website showcasing my skills, projects, and blog posts. Designed with a modern aesthetic.",
+    //     image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&h=500&fit=crop",
+    //     images: [
+    //         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop",
+    //         "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop"
+    //     ],
+    //     sections: [
+    //         {
+    //             title: "Modern Design",
+    //             description: "Featuring a sleek, dark-themed design with glassmorphism effects and smooth animations.",
+    //             image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop"
+    //         },
+    //         {
+    //             title: "Responsive Layout",
+    //             description: "Built with Tailwind CSS to ensure the site looks great on all screen sizes.",
+    //             image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop"
+    //         },
+    //         {
+    //             title: "Dynamic Content",
+    //             description: "Includes a dynamic blog and works section to easily showcase new content.",
+    //             image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=800&h=600&fit=crop"
+    //         }
+    //     ],
+    //     category: "Website"
+    // },
     {
         id: 3,
         title: "MerchMate - Professional FOB Costing Calculator",
         description: "A comprehensive FOB (Free on Board) costing calculator for the garment manufacturing industry. Calculate accurate costs for T-Shirts, Shirts, Jeans with detailed fabric consumption and profit margin analysis.",
-        image: MerchMateImage1,
+        image: Merchmate1,
         images: [
-            MerchMateImage1,
-            MerchMateImage2,
-            MerchMateImage3,
-            MerchMateImage4
+            Merchmate1,
+            MerchMate2,
+            MerchMate3,
+            MerchMate4,
+            MerchMate5,
+            MerchMate6,
+            MerchMate7,
+            MerchMate8,
+
         ],
         sections: [
             {
@@ -119,20 +130,16 @@ export const works: ContentItem[] = [
             }
         ],
         category: "Mobile App",
-        link: "https://www.linkedin.com/posts/activity-7410773504008204288-oCa7?utm_source=share&utm_medium=member_android&rcm=ACoAADED-aMB8NNHatajjLlEjbKXTA9C5_tsLAM"
+        link: "https://github.com/abdnoman001/Merch-Mate/releases"
     },
     {
         id: 4,
         title: "Lab Dip & Shade Intelligence",
         description: "A production-ready Electron desktop application for Bangladesh textile dyeing labs. Digitizes lab dip recipe management, tracks shade quality with ΔE measurements, and reduces approval cycles by replacing Excel-based workflows with an intelligent offline system.",
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop",
+        image: Lab1,
         images: [
-            "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1604754742629-3e5728249d73?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1581092918484-8313e1f3f5e5?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=600&fit=crop"
+            Lab1,
+            Lab2
         ],
         sections: [
             {
