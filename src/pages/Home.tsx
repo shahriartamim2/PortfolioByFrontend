@@ -14,7 +14,7 @@ const Home = () => {
 
   const handleViewCV = () => {
     // Replace this URL with your actual Google Drive shareable link
-    const googleDriveLink = 'https://drive.google.com/file/d/1GgY1vCvPXyzL5BR1pGJ_vFK1wvikM66v/view';
+    const googleDriveLink = 'https://drive.google.com/file/d/1qWf3onTY3xaZXGFk1SAFImqcXBMdNMlg/view?usp=drivesdk';
     window.open(googleDriveLink, '_blank', 'noopener,noreferrer');
   };
 
