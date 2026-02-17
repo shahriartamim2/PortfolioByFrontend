@@ -65,9 +65,8 @@ const Home = () => {
     {
       degree: 'B.Sc. in Textile Engineering',
       institution: 'Bangladesh University of Textiles (BUTEX)',
-      year: '2026 (Expected)',
+      year: '2025',
       subject: 'Specialized in Yarn Manufacturing',
-      result: 'CGPA - 3.21'
     },
     {
       degree: 'Higher Secondary Certificate (HSC)',
