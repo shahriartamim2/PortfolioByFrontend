@@ -13,7 +13,7 @@ export default function AppRoutes() {
     return (
         <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
             <Routes>
-                <Route path="/" element={<MyWorks />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/about" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:blogId" element={<BlogDetail />} />

@@ -2,6 +2,7 @@ import { Award, Briefcase, Code, ExternalLink, Github, GraduationCap, Linkedin, 
 import { useEffect, useState } from 'react';
 import SEO from '../components/SEO';
 import profileImage from '../images/profile.jpg';
+import MyWorks from './MyWorks';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -67,6 +68,7 @@ const Home = () => {
       institution: 'Bangladesh University of Textiles (BUTEX)',
       year: '2025',
       subject: 'Specialized in Yarn Manufacturing',
+      result: 'First Class'
     },
     {
       degree: 'Higher Secondary Certificate (HSC)',
@@ -219,9 +221,8 @@ const Home = () => {
               quality control systems, and production process optimization.
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
-              I am deeply committed to sustainable practices and continuous improvement in textile manufacturing.
-              My work focuses on integrating modern technology with traditional craftsmanship to create innovative,
-              eco-friendly solutions that meet the evolving demands of the global textile industry.
+              My work focuses on integrating modern technology with textile industry to create innovative
+              solutions that meet the evolving demands of the global textile industry.
             </p>
           </div>
         </div>
@@ -286,6 +287,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      
 
       {/* Skills */}
       <section id="skills" className="py-24 sm:py-32 px-0 sm:px-6 relative">
@@ -356,6 +359,8 @@ const Home = () => {
           </div>
         </div>
       </section> */}
+
+      <MyWorks />
 
       {/* Certifications */}
       <section id="certifications" className="py-24 sm:py-32 px-0 sm:px-6 relative">
