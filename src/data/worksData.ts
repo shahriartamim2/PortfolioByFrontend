@@ -9,6 +9,8 @@ import MerchMate7 from '../images/merchmate/pdf.png';
 import MerchMate8 from '../images/merchmate/excel.png';
 import Lab1 from '../images/labdip/lab1.jpeg';
 import Lab2 from '../images/labdip/lab2.jpeg';
+import exceldash from "../images/dashboard/excell-dash.gif";
+import powerbidash from "../images/dashboard/PowerBi.gif";
 
 export const works: ContentItem[] = [
     // {
@@ -88,6 +90,30 @@ export const works: ContentItem[] = [
     // },
     {
         id: 3,
+        title: "Excel - Power BI Dashboard",
+        description: "A comprehensive dashboard built with Excel and Power BI to visualize key performance indicators (KPIs) and business metrics. The dashboard features interactive charts, data filters, and a modern design to provide actionable insights at a glance.",
+        image: powerbidash,
+        images: [
+            powerbidash,
+            exceldash
+        ],
+        sections: [
+            {
+                title: "Interactive Visualizations",
+                description: "The dashboard includes a variety of interactive charts and graphs that allow users to explore data trends and patterns. Users can filter data by date, category, and other dimensions to gain deeper insights.",
+                image: powerbidash
+            },
+            {
+                title: "Key Performance Indicators",
+                description: "Displays critical KPIs in a visually appealing format, making it easy for stakeholders to monitor business performance and make informed decisions.",
+                image: exceldash
+            },
+
+        ],
+        category: "Dashboard",
+    },
+    {
+        id: 4,
         title: "MerchMate - Professional FOB Costing Calculator",
         description: "A comprehensive FOB (Free on Board) costing calculator for the garment manufacturing industry. Calculate accurate costs for T-Shirts, Shirts, Jeans with detailed fabric consumption and profit margin analysis.",
         image: Merchmate1,
@@ -106,34 +132,34 @@ export const works: ContentItem[] = [
             {
                 title: "Multi-Garment Support",
                 description: "Supports multiple garment types including T-Shirts (Knit), Woven Shirts, and Denim Jeans. Each garment type has specialized calculations based on fabric consumption, dimensions, and manufacturing requirements.",
-                image: "/src/images/input.jpg"
+                image: ""
             },
             {
                 title: "Real-Time Cost Calculations",
                 description: "Instantly calculates FOB prices with comprehensive cost breakdowns including fabric costs, accessories, CM costs, washing, commercial, and testing expenses. Features adjustable profit margins with live FOB updates.",
-                image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop"
+                image: ""
             },
             {
                 title: "Advanced Features",
                 description: "Includes calculation history storage, universal sharing capabilities, configurable wastage allowances, and custom fabric allowances for precise pattern cutting. Built with AsyncStorage for local data persistence.",
-                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+                image: ""
             },
             {
                 title: "Professional Interface",
                 description: "Clean, intuitive design with a professional landing page, easy-to-read cost breakdowns, and quick access to saved calculations. Built with React Native and Expo for cross-platform compatibility.",
-                image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop"
+                image: ""
             },
             {
                 title: "Technical Implementation",
                 description: "Developed using React Native with Expo framework, React Navigation for seamless navigation, and complex calculation formulas for accurate fabric consumption. Supports Android 6.0+ and iOS 13.0+.",
-                image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop"
+                image: ""
             }
         ],
         category: "Mobile App",
         link: "https://github.com/abdnoman001/Merch-Mate/releases"
     },
     {
-        id: 4,
+        id: 5,
         title: "Lab Dip & Shade Intelligence",
         description: "A production-ready Electron desktop application for Bangladesh textile dyeing labs. Digitizes lab dip recipe management, tracks shade quality with ΔE measurements, and reduces approval cycles by replacing Excel-based workflows with an intelligent offline system.",
         image: Lab1,
@@ -145,32 +171,32 @@ export const works: ContentItem[] = [
             {
                 title: "Lab Dip Recipe Management",
                 description: "Digital recipe versioning system with locking mechanisms and comprehensive history tracking. Replaces error-prone Excel sheets with a structured database approach, ensuring recipe consistency and auditability across the production lifecycle.",
-                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop"
+                image: ""
             },
             {
                 title: "ΔE Tracking & Shade Evaluation",
                 description: "Objective colorimetric measurement tracking using industry-standard ΔE values. Tracks shade quality across multiple iterations, enabling data-driven decisions for dye recipe adjustments and buyer approval workflows.",
-                image: "https://images.unsplash.com/photo-1604754742629-3e5728249d73?w=800&h=600&fit=crop"
+                image: ""
             },
             {
                 title: "Shade Correction Intelligence",
                 description: "Rule-based correction suggestion system that analyzes historical data and current measurements to recommend optimal dye adjustments. Reduces trial-and-error iterations and accelerates shade matching for lab technicians.",
-                image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop"
+                image: ""
             },
             {
                 title: "Approval Workflow & Analytics",
                 description: "Complete buyer approval process tracking with audit trails and historical success probability analysis. Provides data-driven risk assessment for approval likelihood based on past performance, helping prioritize critical orders.",
-                image: "https://images.unsplash.com/photo-1581092918484-8313e1f3f5e5?w=800&h=600&fit=crop"
+                image: ""
             },
             {
                 title: "Enterprise-Grade Technical Stack",
                 description: "Built with Electron 28 for cross-platform desktop deployment, React 18 + TypeScript for robust UI, SQLite for local data with PostgreSQL support for enterprise. Features role-based access control (Admin, R&D Manager, QA, Lab Technician), bcrypt encryption, and PDF/Excel export capabilities using PDFKit and XLSX libraries.",
-                image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=600&fit=crop"
+                image: ""
             },
             {
                 title: "Offline-First Architecture",
                 description: "Fully functional without network connectivity, designed for factory-floor use in Bangladesh textile laboratories. Local encrypted password storage, complete database schema with 15+ tables, and comprehensive audit logging ensure data integrity and security.",
-                image: "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=600&fit=crop"
+                image: ""
             }
         ],
         category: "Desktop App",

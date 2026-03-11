@@ -79,7 +79,7 @@ const WorkDetail: React.FC = () => {
             />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 pt-20 pb-8 sm:py-20 md:py-24">
                 <button
-                    onClick={() => navigate('/')}
+                    onClick={() => navigate('/works')}
                     className="text-white/60 hover:text-white transition-colors mb-6 sm:mb-8 flex items-center gap-2 group active:scale-95 transform"
                 >
                     <span className="group-hover:-translate-x-1 transition-transform text-lg sm:text-base">←</span>
@@ -197,7 +197,7 @@ const WorkDetail: React.FC = () => {
 
                     {/* Professional Documentation Sections */}
                     {work.sections && work.sections.length > 0 && (
-                        <div className="max-w-5xl mx-auto space-y-12">
+                        <div className="max-w-full mx-auto space-y-12">
                             <div className="border-l-4 border-white/20 pl-6">
                                 <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">Key Features & Implementation</h2>
                             </div>
@@ -221,6 +221,15 @@ const WorkDetail: React.FC = () => {
                                                 <p className="text-white/70 leading-relaxed">
                                                     {section.description}
                                                 </p>
+                                                {section.image && (
+                                                    <div className="mt-4">
+                                                        <img
+                                                            src={section.image}
+                                                            alt={`${work.title} - Section ${index + 1}`}
+                                                            className="w-full rounded-lg border border-white/10"
+                                                        />
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
