@@ -122,7 +122,7 @@ const App: React.FC = () => {
       />
       <div className="container mx-auto px-4 sm:px-6 pt-32 pb-12 sm:py-24 lg:px-8">
         <header className="text-center mb-12 md:mb-20">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Contact Us</h1>
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Contact Me</h1>
           <p className="mt-4 text-lg leading-8 text-neutral-400 max-w-2xl mx-auto">
             We're here to help. Reach out to us through any of the channels below, and we'll get back to you as soon as possible.
           </p>
