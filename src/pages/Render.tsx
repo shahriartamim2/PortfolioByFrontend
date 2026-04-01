@@ -27,16 +27,16 @@ const Render: React.FC = () => {
   }, [splat]);
 
   return (
-    <div className="w-full h-screen flex flex-col bg-slate-900">
+    <div className="w-full h-screen flex flex-col bg-slate-900 mt-16">
       {/* Header */}
-      <div className="bg-slate-800 border-b border-slate-700 p-4 flex items-center justify-between">
+      <div className="bg-slate-800 border-b border-slate-700 px-4 py-2 flex items-center justify-between">
         <button
           onClick={() => navigate(-1)}
-          className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded transition-colors"
+          className="px-4 bg-slate-700 hover:bg-slate-600 text-white rounded transition-colors"
         >
           ← Back
         </button>
-        <h1 className="text-xl font-bold text-white">3D Render Viewer</h1>
+        <h3 className="text-xl font-bold text-white">3D Render Viewer</h3>
         <div className="w-24" />
       </div>
 
