@@ -20,14 +20,21 @@ export default function Navbar() {
                 className={({ isActive }: { isActive: boolean }) => `text-white/80 font-medium transition-all duration-300 relative group px-3 sm:px-4 py-2 text-sm sm:text-base ${isActive ? 'text-white bg-white/5' : 'hover:text-white hover:bg-white/5'}`}
             >
                 <span className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-300" />
-                <span className="relative z-10">About Me</span>
+                <span className="relative z-10">Profile</span>
             </NavLink>
             <NavLink
                 to="/works"
                 className={({ isActive }: { isActive: boolean }) => `text-white/80 font-medium transition-all duration-300 relative group px-3 sm:px-4 py-2 text-sm sm:text-base ${isActive ? 'text-white bg-white/5' : 'hover:text-white hover:bg-white/5'}`}
             >
                 <span className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-300" />
-                <span className="relative z-10">My Works</span>
+                <span className="relative z-10">Works</span>
+            </NavLink>
+            <NavLink
+                to="/renders"
+                className={({ isActive }: { isActive: boolean }) => `text-white/80 font-medium transition-all duration-300 relative group px-3 sm:px-4 py-2 text-sm sm:text-base ${isActive ? 'text-white bg-white/5' : 'hover:text-white hover:bg-white/5'}`}
+            >
+                <span className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-300" />
+                <span className="relative z-10">3D Renders</span>
             </NavLink>
 
             <NavLink

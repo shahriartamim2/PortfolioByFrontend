@@ -9,6 +9,7 @@ import MerchMate7 from '../images/merchmate/pdf.png';
 import MerchMate8 from '../images/merchmate/excel.png';
 import Lab1 from '../images/labdip/lab1.jpeg';
 import Lab2 from '../images/labdip/lab2.jpeg';
+import RunesSplat from "../images/supersplat/RunesSplat.png";
 import exceldash from "../images/dashboard/excell-dash.gif";
 import powerbidash from "../images/dashboard/PowerBi.gif";
 
