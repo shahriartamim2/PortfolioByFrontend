@@ -15,7 +15,7 @@ const Home = () => {
 
   const handleViewCV = () => {
     // Replace this URL with your actual Google Drive shareable link
-    const googleDriveLink = 'https://drive.google.com/file/d/1qWf3onTY3xaZXGFk1SAFImqcXBMdNMlg/view?usp=drivesdk';
+    const googleDriveLink = 'https://drive.google.com/file/d/1fdKbflctG2yfV0lJLM4Xa6cTjBYc_QyQ/view?usp=drivesdk';
     window.open(googleDriveLink, '_blank', 'noopener,noreferrer');
   };
 
@@ -181,7 +181,7 @@ const Home = () => {
             </div>
 
             {/* View CV Button */}
-            <div className="animate-fadeIn delay-300">
+            <div className="animate-fadeIn delay-300 cursor-pointer">
               <button
                 onClick={handleViewCV}
                 className="inline-flex items-center gap-3 px-8 py-3.5 sm:py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/50 group text-base sm:text-lg"
