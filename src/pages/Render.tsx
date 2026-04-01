@@ -29,14 +29,14 @@ const Render: React.FC = () => {
   return (
     <div className="w-full h-screen flex flex-col bg-slate-900 mt-16">
       {/* Header */}
-      <div className="bg-slate-800 border-b border-slate-700 px-4 py-2 flex items-center justify-between">
+      <div className="bg-slate-800 border-b border-slate-700 px-4 py-2 md:py-4  flex items-center justify-between">
         <button
           onClick={() => navigate(-1)}
           className="px-4 bg-slate-700 hover:bg-slate-600 text-white rounded transition-colors"
         >
           ← Back
         </button>
-        <h3 className="text-xl font-bold text-white">3D Render Viewer</h3>
+        <span className="md:text-xl font-bold text-white">3D Render Viewer</span>
         <div className="w-24" />
       </div>
 
@@ -74,7 +74,7 @@ const Render: React.FC = () => {
         )}
 
         {splat && (
-          <div className="w-full h-full">
+          <div className="w-[90%] h-[90%] mx-auto my-8 border border-slate-700 rounded-lg overflow-hidden">
             <iframe
               title={splat.title}
               src={splat.url}
