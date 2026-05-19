@@ -60,20 +60,20 @@ export default function ContentCard({
                 </span>
             </div>
 
-            <div className="flex flex-1 flex-col p-5">
+            <div className="flex flex-1 flex-col p-4 sm:p-5">
                 {showDate && item.date && (
-                    <time className="mono-note mb-3 block" dateTime={item.date}>
+                    <time className="mono-note mb-2 block" dateTime={item.date}>
                         {item.date}
                     </time>
                 )}
-                <h2 className="mb-3 text-xl font-black leading-tight text-[var(--ink-strong)]">
+                <h2 className="mb-2 text-lg font-bold leading-snug text-[var(--ink-strong)]">
                     {item.title}
                 </h2>
-                <p className="section-copy line-clamp-3 text-sm">
+                <p className="section-copy line-clamp-3 min-h-[3.5rem] text-sm">
                     {item.description}
                 </p>
 
-                <div className="mt-auto flex items-center justify-between border-t border-[var(--line)] pt-4 text-sm font-extrabold text-[var(--ink-muted)] transition-colors group-hover:text-[var(--ink-strong)]">
+                <div className="mt-auto flex items-center justify-between border-t border-[var(--line)] pt-3 text-sm font-semibold text-[var(--ink-muted)] transition-colors group-hover:text-[var(--ink-strong)]">
                     <span>{actionLabel}</span>
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
                 </div>

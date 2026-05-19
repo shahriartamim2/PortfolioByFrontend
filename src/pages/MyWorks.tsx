@@ -25,7 +25,7 @@ export default function MyWorks({ embedded = false }: MyWorksProps) {
                 />
             )}
 
-            <div className={embedded ? 'mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8' : ''}>
+            <div className={embedded ? 'narrow-shell' : ''}>
                 <header className="mb-8 flex flex-col gap-3 sm:mb-12 md:flex-row md:items-end md:justify-between">
                     <div>
                         <span className="miro-label">Work Archive</span>

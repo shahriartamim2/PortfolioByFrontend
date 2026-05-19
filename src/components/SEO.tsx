@@ -76,8 +76,8 @@ export default function SEO({
             <meta name="author" content={PROFILE.name} />
             <meta name="robots" content="index, follow, max-image-preview:large" />
             <meta name="language" content="English" />
-            <meta name="theme-color" content="#f7f6f1" media="(prefers-color-scheme: light)" />
-            <meta name="theme-color" content="#0f1217" media="(prefers-color-scheme: dark)" />
+            <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+            <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
             <link rel="canonical" href={url} />
 
             <meta property="og:type" content={ogType} />
@@ -85,6 +85,8 @@ export default function SEO({
             <meta property="og:title" content={fullTitle} />
             <meta property="og:description" content={description} />
             <meta property="og:image" content={image} />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
             <meta property="og:site_name" content={SITE_NAME} />
             <meta property="og:locale" content="en_US" />
             {publishedTime && <meta property="article:published_time" content={publishedTime} />}
@@ -95,6 +97,8 @@ export default function SEO({
             <meta name="twitter:title" content={fullTitle} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={image} />
+
+            <link rel="alternate" href={url} hrefLang="en" />
 
             <script type="application/ld+json">{JSON.stringify(schema)}</script>
         </Helmet>

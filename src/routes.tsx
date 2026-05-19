@@ -14,7 +14,14 @@ const Render = lazy(() => import('./pages/Render'))
 
 export default function AppRoutes() {
     return (
-        <Suspense fallback={<div className="page-shell text-center font-bold text-[var(--ink-muted)]">Loading...</div>}>
+        <Suspense fallback={
+            <div className="page-shell flex items-center justify-center">
+                <div className="flex flex-col items-center gap-4">
+                    <div className="h-6 w-6 animate-spin rounded-full border-2 border-[var(--line)] border-t-[var(--ink-strong)]" />
+                    <span className="mono-note">Loading…</span>
+                </div>
+            </div>
+        }>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<Home />} />

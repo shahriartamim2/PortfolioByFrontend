@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://abdnomancv.netlify.app';
+export const SITE_URL = 'https://abdullahnomancv.netlify.app';
 export const SITE_NAME = 'Abdullah Noman Portfolio';
 export const SITE_TITLE = 'Abdullah Noman - Textile Engineer & Software Developer';
 export const SITE_DESCRIPTION =
@@ -10,7 +10,7 @@ export const PROFILE = {
   location: 'Dhaka, Bangladesh',
   email: 'abdullahnoman001@gmail.com',
   university: 'Bangladesh University of Textiles (BUTEX)',
-  cvUrl: 'https://drive.google.com/file/d/1fdKbflctG2yfV0lJLM4Xa6cTjBYc_QyQ/view?usp=drivesdk',
+  cvUrl: 'https://drive.google.com/file/d/11JvOuSDxDlGG8ERPoG5KH46_SV_-LUyV/view?usp=drivesdk',
   github: 'https://github.com/shahriartamim2',
   linkedin: 'https://www.linkedin.com/in/me-noman/',
   facebook: 'https://www.facebook.com/abdnoman001',

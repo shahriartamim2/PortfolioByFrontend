@@ -254,7 +254,7 @@ export default function Home() {
       </section>
 
       <section id="skills" className="section-block">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="narrow-shell">
           <div className="mb-8 flex items-center gap-3">
             <Code className="h-5 w-5 text-[var(--accent-ink)]" aria-hidden="true" />
             <h2 className="section-title">Skills</h2>
