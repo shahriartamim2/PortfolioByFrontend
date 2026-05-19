@@ -1,46 +1,53 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ContentCard, { ContentItem } from '../components/ContentCard';
 import SEO from '../components/SEO';
 import { works } from '../data/worksData';
 
-const MyWorks: React.FC = () => {
-    const navigate = useNavigate();
+interface MyWorksProps {
+    embedded?: boolean;
+}
 
-    console.log('MyWorks component rendering', { works });
+export default function MyWorks({ embedded = false }: MyWorksProps) {
+    const navigate = useNavigate();
 
     const handleWorkClick = (work: ContentItem): void => {
         navigate(`/works/${work.id}`);
     };
 
     return (
-        <div className="text-white">
-            <SEO
-                title="My Works"
-                description="Explore the portfolio of Abdullah Noman featuring innovative textile engineering projects, software solutions, and web applications. Including Lab Dip Management System, FOB Costing Calculator, and more."
-                keywords="Portfolio, Projects, Textile Engineering Projects, Software Development, React Projects, Electron Apps, Lab Dip System, FOB Calculator"
-                canonicalUrl="/"
-            />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 pt-32 pb-16 sm:py-20 md:py-24">
-                <header className="mb-8 sm:mb-12 md:mb-16 text-center sm:text-left">
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2 sm:mb-4">My Works</h1>
-                    <p className="text-white/60 text-base sm:text-lg md:text-xl">A showcase of my projects and creations</p>
+        <section className={embedded ? 'section-block' : 'page-shell'} id={embedded ? 'works' : undefined}>
+            {!embedded && (
+                <SEO
+                    title="Works"
+                    description="Explore Abdullah Noman's textile engineering and software projects, including Power BI dashboards, FOB costing tools, and lab dip shade intelligence systems."
+                    keywords="Portfolio Projects, Textile Engineering Projects, Software Development, Power BI Dashboard, FOB Calculator, Lab Dip System"
+                    canonicalUrl="/works"
+                />
+            )}
+
+            <div className={embedded ? 'mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8' : ''}>
+                <header className="mb-8 flex flex-col gap-3 sm:mb-12 md:flex-row md:items-end md:justify-between">
+                    <div>
+                        <span className="miro-label">Work Archive</span>
+                        <h1 className="section-title mt-5">{embedded ? 'Selected Works' : 'Works'}</h1>
+                    </div>
+                    <p className="section-copy max-w-2xl">
+                        Projects focused on dashboards, costing, lab workflows, and practical textile technology.
+                    </p>
                 </header>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
-                    {works.map((work: ContentItem) => (
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    {works.map((work) => (
                         <ContentCard
                             key={work.id}
                             item={work}
                             onClick={handleWorkClick}
                             showDate={false}
-                            actionLabel="View Details"
+                            actionLabel="View details"
                         />
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
-};
-
-export default MyWorks;
+}

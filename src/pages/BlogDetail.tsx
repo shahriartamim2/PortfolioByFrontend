@@ -1,26 +1,42 @@
-import React, { useEffect } from 'react';
+import { ArrowLeft } from 'lucide-react';
+import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { PROFILE, SITE_URL } from '../config/site';
 import { blogPosts } from '../data/blogData';
 
-const BlogDetail: React.FC = () => {
+export default function BlogDetail() {
     const { blogId } = useParams<{ blogId: string }>();
     const navigate = useNavigate();
-
     const blog = blogPosts.find((b) => b.id === Number(blogId));
 
     useEffect(() => {
-        if (!blog) {
-            navigate('/blog');
-        }
+        if (!blog) navigate('/blog');
     }, [blog, navigate]);
 
-    if (!blog) {
-        return null;
-    }
+    if (!blog) return null;
+
+    const publishedTime = blog.date ? new Date(blog.date).toISOString() : undefined;
+    const articleSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: blog.title,
+        description: blog.description,
+        image: blog.image,
+        datePublished: publishedTime,
+        author: {
+            '@type': 'Person',
+            name: PROFILE.name,
+        },
+        publisher: {
+            '@type': 'Person',
+            name: PROFILE.name,
+        },
+        mainEntityOfPage: `${SITE_URL}/blog/${blog.id}`,
+    };
 
     return (
-        <div>
+        <main className="page-shell">
             <SEO
                 title={blog.title}
                 description={blog.description}
@@ -28,44 +44,41 @@ const BlogDetail: React.FC = () => {
                 ogImage={blog.image}
                 ogType="article"
                 canonicalUrl={`/blog/${blog.id}`}
+                publishedTime={publishedTime}
+                structuredData={articleSchema}
             />
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 pt-20 pb-8 sm:py-20 md:py-24">
-                <button
-                    onClick={() => navigate('/blog')}
-                    className="text-white/60 hover:text-white transition-colors mb-6 sm:mb-8 flex items-center gap-2 group active:scale-95 transform"
-                >
-                    <span className="group-hover:-translate-x-1 transition-transform text-lg sm:text-base">←</span>
-                    <span className="text-sm sm:text-base">Back to Blogs</span>
-                </button>
 
-                <article className="space-y-6 sm:space-y-8">
-                    <header>
-                        <time className="text-xs sm:text-sm text-white/40">{blog.date}</time>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-2 mb-3 sm:mb-4 leading-tight">
-                            {blog.title}
-                        </h1>
-                        <span className="inline-block px-3 py-1 bg-white/10 text-white/80 text-xs sm:text-sm rounded-full">
-                            {blog.category}
-                        </span>
-                    </header>
+            <button onClick={() => navigate('/blog')} className="secondary-button mb-8">
+                <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                Back to blog
+            </button>
 
-                    <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-white/10">
-                        <img
-                            src={blog.image}
-                            alt={blog.title}
-                            className="w-full h-56 sm:h-72 md:h-96 object-cover"
-                        />
+            <article className="mx-auto max-w-4xl">
+                <header className="paper-panel overflow-hidden">
+                    <div className="p-5 sm:p-8">
+                        <div className="mb-5 flex flex-wrap items-center gap-3">
+                            <span className="miro-label">Article</span>
+                            <span className="soft-label">{blog.category}</span>
+                            {blog.date && <time className="mono-note">{blog.date}</time>}
+                        </div>
+                        <h1 className="page-title">{blog.title}</h1>
+                        <p className="section-copy mt-6 text-lg">{blog.description}</p>
                     </div>
+                    <img
+                        src={blog.image}
+                        alt={blog.title}
+                        className="aspect-[16/9] w-full border-t border-[var(--line)] object-cover"
+                        loading="eager"
+                        decoding="async"
+                    />
+                </header>
 
-                    <div className="prose prose-invert max-w-none">
-                        <p className="text-white/70 text-base sm:text-lg leading-relaxed">
-                            {blog.description}
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </div>
+                <div className="mt-8 border-l-4 border-[var(--line-strong)] pl-5">
+                    <p className="section-copy text-lg">
+                        This article summary is a starting point for a fuller write-up. It frames the topic, core tension, and practical relevance for textile production teams and technology builders.
+                    </p>
+                </div>
+            </article>
+        </main>
     );
-};
-
-export default BlogDetail;
+}

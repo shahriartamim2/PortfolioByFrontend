@@ -1,10 +1,9 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ContentCard, { ContentItem } from '../components/ContentCard';
 import SEO from '../components/SEO';
 import { blogPosts } from '../data/blogData';
 
-const Blog: React.FC = () => {
+export default function Blog() {
   const navigate = useNavigate();
 
   const handleBlogClick = (post: ContentItem): void => {
@@ -12,27 +11,29 @@ const Blog: React.FC = () => {
   };
 
   return (
-    <div className="text-white">
+    <main className="page-shell">
       <SEO
         title="Blog"
-        description="Read insights and articles about textile engineering, sustainable manufacturing, AI in textiles, smart fabrics, and the future of fashion industry by Abdullah Noman."
-        keywords="Textile Engineering Blog, Sustainable Textiles, AI in Textiles, Smart Fabrics, Fashion Technology, Industry Insights"
+        description="Read Abdullah Noman's notes on textile engineering, sustainable manufacturing, AI in textiles, smart fabrics, and fashion technology."
+        keywords="Textile Engineering Blog, Sustainable Textiles, AI in Textiles, Smart Fabrics, Fashion Technology, Textile Industry"
         canonicalUrl="/blog"
       />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 pt-32 pb-16 sm:py-20 md:py-24">
-        <header className="mb-8 sm:mb-12 md:mb-16 text-center sm:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2 sm:mb-4">Blog</h1>
-          <p className="text-white/60 text-base sm:text-lg md:text-xl">Insights on Textile Engineering & Technology</p>
-        </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
-          {blogPosts.map((post: ContentItem) => (
-            <ContentCard key={post.id} item={post} onClick={handleBlogClick} />
-          ))}
+      <header className="mb-10 grid gap-5 md:grid-cols-[0.7fr_1fr] md:items-end">
+        <div>
+          <span className="miro-label">Field Notes</span>
+          <h1 className="page-title mt-5">Blog</h1>
         </div>
-      </div>
-    </div>
-  );
-};
+        <p className="section-copy text-lg">
+          Practical writing on textile engineering, automation, sustainability, and the tools shaping manufacturing work.
+        </p>
+      </header>
 
-export default Blog;
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {blogPosts.map((post) => (
+          <ContentCard key={post.id} item={post} onClick={handleBlogClick} />
+        ))}
+      </div>
+    </main>
+  );
+}

@@ -1,4 +1,5 @@
-import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
+import type { KeyboardEvent } from 'react';
 
 export interface ContentSection {
     title?: string;
@@ -12,10 +13,10 @@ export interface ContentItem {
     description: string;
     date?: string;
     image: string;
-    images?: string[]; // Optional array of additional images
-    sections?: ContentSection[]; // Optional sections for detailed view with alternating layout
+    images?: string[];
+    sections?: ContentSection[];
     category: string;
-    link?: string; // Optional link for external works
+    link?: string;
 }
 
 interface ContentCardProps {
@@ -25,49 +26,58 @@ interface ContentCardProps {
     actionLabel?: string;
 }
 
-const ContentCard: React.FC<ContentCardProps> = ({
+export default function ContentCard({
     item,
     onClick,
     showDate = true,
-    actionLabel = "Read more"
-}) => {
+    actionLabel = 'Read more',
+}: ContentCardProps) {
+    const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            onClick(item);
+        }
+    };
+
     return (
         <article
+            role="button"
+            tabIndex={0}
             onClick={() => onClick(item)}
-            className="group cursor-pointer bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl overflow-hidden hover:bg-white/10 hover:border-white/20 transition-all duration-300 active:scale-98 transform"
+            onKeyDown={handleKeyDown}
+            className="surface-card group flex h-full cursor-pointer flex-col overflow-hidden focus-visible:ring-4 focus-visible:ring-[var(--focus)]"
         >
-            <div className="relative overflow-hidden aspect-video">
+            <div className="relative aspect-video overflow-hidden border-b border-[var(--line)] bg-[var(--panel-muted)]">
                 <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
                     loading="lazy"
+                    decoding="async"
                 />
-                <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
-                    <span className="px-2 sm:px-3 py-1 bg-black/60 backdrop-blur-sm text-white/90 text-xs rounded-full border border-white/20">
-                        {item.category}
-                    </span>
-                </div>
+                <span className="soft-label absolute right-3 top-3 bg-[var(--panel-solid)]">
+                    {item.category}
+                </span>
             </div>
 
-            <div className="p-4 sm:p-5 md:p-6">
+            <div className="flex flex-1 flex-col p-5">
                 {showDate && item.date && (
-                    <time className="text-xs sm:text-sm text-white/40">{item.date}</time>
+                    <time className="mono-note mb-3 block" dateTime={item.date}>
+                        {item.date}
+                    </time>
                 )}
-                <h2 className="text-lg sm:text-xl font-semibold text-white mt-2 mb-2 sm:mb-3 group-hover:text-white/90 transition-colors leading-snug line-clamp-2">
+                <h2 className="mb-3 text-xl font-black leading-tight text-[var(--ink-strong)]">
                     {item.title}
                 </h2>
-                <p className="text-white/60 text-sm sm:text-base leading-relaxed line-clamp-2 sm:line-clamp-3">
+                <p className="section-copy line-clamp-3 text-sm">
                     {item.description}
                 </p>
 
-                <div className="mt-3 sm:mt-4 flex items-center text-white/50 group-hover:text-white/80 transition-colors">
-                    <span className="text-xs sm:text-sm font-medium">{actionLabel}</span>
-                    <span className="ml-2 text-sm group-hover:translate-x-1 transition-transform">→</span>
+                <div className="mt-auto flex items-center justify-between border-t border-[var(--line)] pt-4 text-sm font-extrabold text-[var(--ink-muted)] transition-colors group-hover:text-[var(--ink-strong)]">
+                    <span>{actionLabel}</span>
+                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
                 </div>
             </div>
         </article>
     );
-};
-
-export default ContentCard;
+}

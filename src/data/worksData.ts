@@ -9,9 +9,8 @@ import MerchMate7 from '../images/merchmate/pdf.png';
 import MerchMate8 from '../images/merchmate/excel.png';
 import Lab1 from '../images/labdip/lab1.jpeg';
 import Lab2 from '../images/labdip/lab2.jpeg';
-import RunesSplat from "../images/supersplat/RunesSplat.png";
-import exceldash from "../images/dashboard/excell-dash.gif";
-import powerbidash from "../images/dashboard/PowerBi.gif";
+import excelPoster from "../images/dashboard/excel-poster.webp";
+import powerbiPoster from "../images/dashboard/powerbi-poster.webp";
 
 export const works: ContentItem[] = [
     // {
@@ -93,21 +92,21 @@ export const works: ContentItem[] = [
         id: 3,
         title: "Excel - Power BI Dashboard",
         description: "A comprehensive dashboard built with Excel and Power BI to visualize key performance indicators (KPIs) and business metrics. The dashboard features interactive charts, data filters, and a modern design to provide actionable insights at a glance.",
-        image: powerbidash,
+        image: powerbiPoster,
         images: [
-            powerbidash,
-            exceldash
+            powerbiPoster,
+            excelPoster
         ],
         sections: [
             {
                 title: "Interactive Visualizations",
                 description: "The dashboard includes a variety of interactive charts and graphs that allow users to explore data trends and patterns. Users can filter data by date, category, and other dimensions to gain deeper insights.",
-                image: powerbidash
+                image: powerbiPoster
             },
             {
                 title: "Key Performance Indicators",
                 description: "Displays critical KPIs in a visually appealing format, making it easy for stakeholders to monitor business performance and make informed decisions.",
-                image: exceldash
+                image: excelPoster
             },
 
         ],
@@ -162,7 +161,7 @@ export const works: ContentItem[] = [
     {
         id: 5,
         title: "Lab Dip & Shade Intelligence",
-        description: "A production-ready Electron desktop application for Bangladesh textile dyeing labs. Digitizes lab dip recipe management, tracks shade quality with ΔE measurements, and reduces approval cycles by replacing Excel-based workflows with an intelligent offline system.",
+        description: "A production-ready Electron desktop application for Bangladesh textile dyeing labs. Digitizes lab dip recipe management, tracks shade quality with Delta E measurements, and reduces approval cycles by replacing Excel-based workflows with an intelligent offline system.",
         image: Lab1,
         images: [
             Lab1,
@@ -175,8 +174,8 @@ export const works: ContentItem[] = [
                 image: ""
             },
             {
-                title: "ΔE Tracking & Shade Evaluation",
-                description: "Objective colorimetric measurement tracking using industry-standard ΔE values. Tracks shade quality across multiple iterations, enabling data-driven decisions for dye recipe adjustments and buyer approval workflows.",
+                title: "Delta E Tracking & Shade Evaluation",
+                description: "Objective colorimetric measurement tracking using industry-standard Delta E values. Tracks shade quality across multiple iterations, enabling data-driven decisions for dye recipe adjustments and buyer approval workflows.",
                 image: ""
             },
             {

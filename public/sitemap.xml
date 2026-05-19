@@ -1,105 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage / Works Page -->
   <url>
-    <loc>https://yourdomain.com/</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://abdnomancv.netlify.app/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- About Page -->
   <url>
-    <loc>https://yourdomain.com/about</loc>
-    <lastmod>2026-01-09</lastmod>
+    <loc>https://abdnomancv.netlify.app/about</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- Blog Page -->
   <url>
-    <loc>https://yourdomain.com/blog</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Contact Page -->
-  <url>
-    <loc>https://yourdomain.com/contact</loc>
-    <lastmod>2026-01-09</lastmod>
+    <loc>https://abdnomancv.netlify.app/works</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-  
-  <!-- Individual Works -->
   <url>
-    <loc>https://yourdomain.com/works/1</loc>
-    <lastmod>2026-01-09</lastmod>
+    <loc>https://abdnomancv.netlify.app/works/3</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://yourdomain.com/works/2</loc>
-    <lastmod>2026-01-09</lastmod>
+    <loc>https://abdnomancv.netlify.app/works/4</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://yourdomain.com/works/3</loc>
-    <lastmod>2026-01-09</lastmod>
+    <loc>https://abdnomancv.netlify.app/works/5</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://yourdomain.com/works/4</loc>
-    <lastmod>2026-01-09</lastmod>
+    <loc>https://abdnomancv.netlify.app/renders</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abdnomancv.netlify.app/render/splat-1</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://abdnomancv.netlify.app/blog</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Individual Blog Posts -->
   <url>
-    <loc>https://yourdomain.com/blog/1</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://abdnomancv.netlify.app/blog/1</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://yourdomain.com/blog/2</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://abdnomancv.netlify.app/blog/2</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://yourdomain.com/blog/3</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://abdnomancv.netlify.app/blog/3</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://yourdomain.com/blog/4</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://abdnomancv.netlify.app/blog/4</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://yourdomain.com/blog/5</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://abdnomancv.netlify.app/blog/5</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://yourdomain.com/blog/6</loc>
-    <lastmod>2026-01-09</lastmod>
+    <loc>https://abdnomancv.netlify.app/blog/6</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://abdnomancv.netlify.app/contact</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

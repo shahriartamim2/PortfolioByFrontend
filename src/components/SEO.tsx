@@ -1,58 +1,102 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { PROFILE, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL, toAbsoluteUrl } from '../config/site';
 
 interface SEOProps {
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
     keywords?: string;
     ogImage?: string;
-    ogType?: string;
+    ogType?: 'website' | 'article' | 'profile';
     canonicalUrl?: string;
+    publishedTime?: string;
+    modifiedTime?: string;
+    structuredData?: Record<string, unknown>;
 }
 
-const SEO: React.FC<SEOProps> = ({
+const defaultKeywords = [
+    'Abdullah Noman',
+    'Textile Engineer',
+    'Software Developer',
+    'BUTEX',
+    'Textile Technology',
+    'React Developer',
+    'Power BI Dashboard',
+    'Garment Costing',
+    'Lab Dip Management',
+].join(', ');
+
+export default function SEO({
     title,
-    description,
-    keywords = 'Abdullah Noman, Textile Engineering, Software Development, Portfolio, React Developer, Textile Technology',
-    ogImage = 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=630&fit=crop',
+    description = SITE_DESCRIPTION,
+    keywords = defaultKeywords,
+    ogImage = `${SITE_URL}/icon.svg`,
     ogType = 'website',
-    canonicalUrl,
-}) => {
-    const siteUrl = 'https://yourdomain.com'; // Replace with your actual domain
-    const fullTitle = title ? `${title} | Abdullah Noman` : 'Abdullah Noman - Textile Engineer & Software Developer';
-    const url = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
+    canonicalUrl = '/',
+    publishedTime,
+    modifiedTime,
+    structuredData,
+}: SEOProps) {
+    const fullTitle = title ? `${title} | Abdullah Noman` : SITE_TITLE;
+    const url = toAbsoluteUrl(canonicalUrl);
+    const image = toAbsoluteUrl(ogImage);
+    const schema = structuredData ?? {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: PROFILE.name,
+        jobTitle: PROFILE.jobTitle,
+        email: `mailto:${PROFILE.email}`,
+        address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Dhaka',
+            addressCountry: 'Bangladesh',
+        },
+        alumniOf: {
+            '@type': 'CollegeOrUniversity',
+            name: PROFILE.university,
+        },
+        url: SITE_URL,
+        sameAs: [PROFILE.github, PROFILE.linkedin, PROFILE.facebook],
+        knowsAbout: [
+            'Textile engineering',
+            'Yarn manufacturing',
+            'Quality control',
+            'React',
+            'TypeScript',
+            'Power BI',
+            'Production workflow software',
+        ],
+    };
 
     return (
         <Helmet>
-            {/* Primary Meta Tags */}
             <title>{fullTitle}</title>
             <meta name="title" content={fullTitle} />
             <meta name="description" content={description} />
             <meta name="keywords" content={keywords} />
-            <meta name="author" content="Abdullah Noman" />
+            <meta name="author" content={PROFILE.name} />
+            <meta name="robots" content="index, follow, max-image-preview:large" />
+            <meta name="language" content="English" />
+            <meta name="theme-color" content="#f7f6f1" media="(prefers-color-scheme: light)" />
+            <meta name="theme-color" content="#0f1217" media="(prefers-color-scheme: dark)" />
             <link rel="canonical" href={url} />
 
-            {/* Open Graph / Facebook */}
             <meta property="og:type" content={ogType} />
             <meta property="og:url" content={url} />
             <meta property="og:title" content={fullTitle} />
             <meta property="og:description" content={description} />
-            <meta property="og:image" content={ogImage} />
-            <meta property="og:site_name" content="Abdullah Noman Portfolio" />
+            <meta property="og:image" content={image} />
+            <meta property="og:site_name" content={SITE_NAME} />
+            <meta property="og:locale" content="en_US" />
+            {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+            {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
 
-            {/* Twitter */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:url" content={url} />
             <meta name="twitter:title" content={fullTitle} />
             <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content={ogImage} />
+            <meta name="twitter:image" content={image} />
 
-            {/* Additional SEO tags */}
-            <meta name="robots" content="index, follow" />
-            <meta name="language" content="English" />
-            <meta name="revisit-after" content="7 days" />
+            <script type="application/ld+json">{JSON.stringify(schema)}</script>
         </Helmet>
     );
-};
-
-export default SEO;
+}

@@ -1,96 +1,83 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { splatsData, Splat } from '../data/splatsData';
+import { ArrowLeft, Rotate3D } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { splatsData } from '../data/splatsData';
 
-declare global {
-  interface Window {
-    SuperSplat?: any;
-  }
-}
-
-const Render: React.FC = () => {
+export default function Render() {
   const { renderId } = useParams<{ renderId: string }>();
   const splat = splatsData.find((item) => item.id === renderId);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!splat) {
-      setError('Splat not found');
-      setIsLoading(false);
-      return;
-    }
-
-    setError(null);
     setIsLoading(false);
   }, [splat]);
 
+  if (!splat && !isLoading) {
+    return (
+      <main className="page-shell">
+        <SEO title="Render Not Found" description="The requested 3D render could not be found." canonicalUrl="/renders" />
+        <div className="paper-panel mx-auto max-w-xl p-8 text-center">
+          <h1 className="section-title">Render not found</h1>
+          <p className="section-copy mt-4">The requested 3D scene is no longer available.</p>
+          <button onClick={() => navigate('/renders')} className="primary-button mt-6">
+            Back to renders
+          </button>
+        </div>
+      </main>
+    );
+  }
+
   return (
-    <div className="w-full h-screen flex flex-col bg-slate-900 mt-16">
-      {/* Header */}
-      <div className="bg-slate-800 border-b border-slate-700 px-4 py-2 md:py-4  flex items-center justify-between">
-        <button
-          onClick={() => navigate(-1)}
-          className="px-4 bg-slate-700 hover:bg-slate-600 text-white rounded transition-colors"
-        >
-          ← Back
-        </button>
-        <span className="md:text-xl font-bold text-white">3D Render Viewer</span>
-        <div className="w-24" />
-      </div>
+    <main className="flex min-h-screen flex-col pt-20">
+      {splat && (
+        <SEO
+          title={splat.title}
+          description={splat.description ?? 'Interactive 3D render by Abdullah Noman.'}
+          ogImage={splat.thumbnail}
+          canonicalUrl={`/render/${splat.id}`}
+        />
+      )}
 
-      {/* Viewer Container */}
-      <div className="flex-1 relative overflow-hidden">
+      <header className="border-b border-[var(--line)] bg-[var(--panel)] px-4 py-3 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3">
+          <button onClick={() => navigate('/renders')} className="secondary-button">
+            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+            Back
+          </button>
+          <div className="flex min-w-0 items-center gap-2 text-[var(--ink-strong)]">
+            <Rotate3D className="h-4 w-4 shrink-0" aria-hidden="true" />
+            <span className="truncate text-sm font-black sm:text-base">{splat?.title ?? '3D Render Viewer'}</span>
+          </div>
+          <div className="hidden w-24 sm:block" />
+        </div>
+      </header>
+
+      <section className="flex min-h-[calc(100vh-9rem)] flex-1 items-center justify-center p-3 sm:p-5">
         {isLoading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-slate-900 z-10">
-            <div className="text-center">
-              <div className="inline-block">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
-              </div>
-              <p className="text-white mt-4">Loading 3D render...</p>
-            </div>
+          <div className="paper-panel p-6 text-center">
+            <div className="mx-auto h-10 w-10 animate-spin rounded-full border-2 border-[var(--line)] border-t-[var(--ink-strong)]" />
+            <p className="section-copy mt-4">Loading 3D render...</p>
           </div>
         )}
 
-        {error && (
-          <div className="absolute inset-0 flex items-center justify-center bg-slate-900 z-10">
-            <div className="text-center">
-              <p className="text-red-500 mb-4">{error}</p>
-              <button
-                onClick={() => navigate(-1)}
-                className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded transition-colors"
-              >
-                Go Back
-              </button>
-            </div>
-          </div>
-        )}
-
-        {!splat && !isLoading && !error && (
-          <div className="absolute inset-0 flex items-center justify-center bg-slate-900 z-10">
-            <p className="text-white">Splat not found.</p>
-          </div>
-        )}
-
-        {splat && (
-          <div className="w-[90%] h-[90%] mx-auto my-8 border border-slate-700 rounded-lg overflow-hidden">
+        {splat && !isLoading && (
+          <div className="h-[76vh] w-full max-w-7xl overflow-hidden rounded-lg border border-[var(--line)] bg-black shadow-[var(--shadow)]">
             <iframe
               title={splat.title}
               src={splat.url}
-              className="w-full h-full border-0"
+              className="h-full w-full border-0"
+              loading="lazy"
               allow="fullscreen; xr-spatial-tracking"
             />
           </div>
         )}
-      </div>
+      </section>
 
-      {/* Controls Info */}
-      <div className="bg-slate-800 border-t border-slate-700 p-4 text-sm text-slate-300">
-        <p>🖱️ Drag to rotate • Scroll to zoom • Right-click to pan</p>
-      </div>
-    </div>
+      <footer className="border-t border-[var(--line)] bg-[var(--panel)] px-4 py-3 text-center backdrop-blur-xl">
+        <p className="mono-note">Drag to rotate. Scroll to zoom. Right-click to pan.</p>
+      </footer>
+    </main>
   );
-};
-
-export default Render;
+}

@@ -14,7 +14,7 @@ const Render = lazy(() => import('./pages/Render'))
 
 export default function AppRoutes() {
     return (
-        <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+        <Suspense fallback={<div className="page-shell text-center font-bold text-[var(--ink-muted)]">Loading...</div>}>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<Home />} />
