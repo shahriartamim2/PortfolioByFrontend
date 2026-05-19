@@ -121,7 +121,7 @@ export default function Home() {
           <div className="paper-panel p-5 sm:p-8 lg:p-10">
             <div className="mb-8 flex flex-wrap items-center gap-3">
               <span className="miro-label">Profile Report</span>
-              <span className="mono-note">ID: textile_software_engineer</span>
+              <span className="mono-note">ID: textile_engineer_software_developer</span>
             </div>
 
             <div className="max-w-4xl">
