@@ -81,11 +81,12 @@ const certifications = [
   'ICPC Dhaka Regional Finalist 2024',
   'Python for Data Science & AI',
   'Python course offered by University of Michigan',
-  'Management',
+  'Supply Chain Management',
+  'Supervised Machine Learning'
 ];
 
 const achievements = [
-  'Completed a thesis on fiber and yarn recycling technologies.',
+  'Completed a thesis on Analyzing the properties of fiber and yarn generated from Knit fabric cut waste using recycling technologies.',
 ];
 
 const profileSchema = {
